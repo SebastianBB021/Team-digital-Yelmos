@@ -1,0 +1,275 @@
+/* Header */
+
+.container{
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+  }
+  .header{
+    background-color: #efefef;
+    color: white;
+    padding: 1rem 0;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  .header a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .header ul{
+    list-style: none;
+  }
+  .logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .logo{
+    letter-spacing: 15px;
+    font-size: 1.2em;
+  }
+  .main-nav .icons-nav{
+    font-size: 28px;
+    display: inline-block;
+    padding: 30px 50px ;
+    text-decoration: none;
+  }
+  .main-nav .icons-nav:hover{
+    transform: scale(1.04);
+    color: #dbdbdb;
+    transition: all 0.35s linear;
+  }
+  .main{
+    padding-top: 13rem ;
+  }
+  .main-nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+    .main-nav ul li{
+    display: inline-block;
+    }
+        .main-nav ul li a{
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: all 0.35s linear;
+        border-radius: 5px;
+        }
+            .main-nav ul li a:hover{
+                background-color:#D8D0B6 ;
+  
+            }
+  @media only screen and (max-width: 680px){
+  
+    .main-nav{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .main-nav ul li{
+        display: block;
+        }
+            .main-nav ul li a{
+            display: block;
+            padding: 0.5rem 0;
+            transition: all 0.35s linear;
+            border-radius: 5px;
+            }
+                .main-nav ul li a:hover{
+                    background-color:#D8D0B6 ;
+    
+                }
+  
+    
+  }
+  
+  
+  
+  /* Tabla de Despachos */
+  
+  .titulo {
+    padding-bottom: 15px;
+    background: #10518C;
+    color: #fff;
+    padding: 16px 30px;
+    margin: -20px -25px 10px;
+    border-radius: 3px 3px 0 0;
+  }
+  .titulo h2 {
+    margin: 5px 0 0;
+    font-size: 24px;
+  }
+  .titulo.btn {
+    color: #566787;
+    float: right;
+    font-size: 13px;
+    background: rgb(252, 252, 252);
+    border: none;
+    min-width: 50px;
+    border-radius: 2px;
+    border: none;
+    outline: none !important;
+    margin-left: 10px;
+  }
+  .titulo .btn:hover, .titulo .btn:focus {
+    color: #e0e5ee;
+    background: #f2f2f2;
+  }
+  .titulo .btn i {
+    float: left;
+    font-size: 21px;
+    margin-right: 5px;
+  }
+  .titulo .btn span {
+    float: left;
+    margin-top: 2px;
+  }
+  .buscar{
+    display: flex;
+  }
+  
+  /* Tabla */
+  /* ++++++++++++++ */
+  table.table tr th, table.table tr td {
+    border-color: #e9e9e9;
+    padding: 12px 15px;
+    vertical-align: middle;
+  }
+  table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+  }	
+  table.table td:last-child i {
+    opacity: 0.9;
+    font-size: 22px;
+    margin: 0 5px;
+  }
+  table.table td a:hover {
+    color: #0c66af;
+  }
+  table.table td a.settings {
+    color: #2196F3;
+  }
+  table.table td a.delete {
+    color: #ec1000;
+  }
+  table.table td i {
+    font-size: 19px;
+  }
+  
+  /* Tabla */
+  /* -------------- */
+  /* -------------- */
+  /* -------------- */
+  /* Estado */
+  /* ++++++++++++ */
+  .status {
+    font-size: 30px;
+    margin: 2px 2px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 10px;
+  }
+  .text-success {
+    color: #10c469;
+  }
+  .text-info {
+    color: #62c9e8;
+  }
+  .text-warning {
+    color: #FFC107;
+  }
+  .text-danger {
+    color: #ff5b5b;
+  }
+  /* Estado */
+  /* ------------------- */
+  /* ------------------- */
+  /* ------------------- */
+  
+  .btn-group{
+    padding: 15px;
+    float: right;
+  }
+  .Generar{
+    text-align: center;
+    padding: 15px;
+  }
+  
+  
+  
+  
+  /* Eliminar */
+  
+  
+  .modal .modal-footer {
+  background: #e6e6e6;
+  
+  }
+  
+  .modal .form-control {
+  border-radius: 2px;
+  box-shadow: none;
+  border-color: #000000;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /* Editar */
+  
+  
+  .form-control {
+  height: 41px;
+  background: #f2f2f2;
+  box-shadow: none !important;
+  border: none;
+  }
+  .form-control:focus {
+  background: #e2e2e2;
+  }
+  .form-control, .btn {        
+  border-radius: 3px;
+  }
+  .signup-form {
+  width: 400px;
+  margin: 30px auto;
+  }
+  .signup-form form {
+  color: #999;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  background: #fff;
+  box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.3);
+  padding: 30px;
+  }
+  .signup-form h2  {
+  color: #333;
+  font-weight: bold;
+  margin-top: 0;
+  }
+  .signup-form .btn {        
+  font-size: 16px;
+  font-weight: bold;
+  background: #10518C;
+  border: none;
+  min-width: 140px;
+  }
+  .signup-form .btn:hover, .signup-form .btn:focus {
+  background: #0a4d8b !important;
+  outline: none;
+  }
+  .signup-form form a {
+  color: #dc3535;
+  text-decoration: none;
+  }
+  

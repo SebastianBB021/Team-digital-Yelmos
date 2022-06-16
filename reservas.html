@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/reservas.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <script src="https://kit.fontawesome.com/e87692bdd7.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="/script/pestañas.js" defer></script>
+    <script src="/script/validacionReserva.js"></script>
+</head>
+<body>
+     <!-- ENCABEZADO -->
+    <header class="header">
+        <div class="container logo-nav-container">
+            <a href="#" class="logo"><img src="/img/Logo Team Digital Yelmos.jpeg" alt=""></a>
+            <nav class="main-nav">
+                <ul class="list-main-nav">
+                    <li class="nav-item"><a href="/iniciocliente.html">Inicio</a></li>
+                    <li class="nav-item"><a href="/servicioscliente.html">Servicios</a></li>
+                    <li class="nav-item"><a href="/quienesSomoscliente.html">Quiénes somos</a></li>
+                    <li class="nav-item"><a href="/reservas.html">Reservar</a></li>
+                    <a href="/perfilcliente.html" class="icons-nav">
+                        <i class="fa-solid fa-user"></i>
+                    </a> 
+                    <a href="/index.html" class="icons-nav">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+        <div class="container" id="contenedor-formulario">
+            <div id="titulo-formulario" class="text-center mb-4">
+                <div class="servicios">
+                    <p data-target="#logistica">Packing</p>
+                    <p data-target="#materialP">Material P.O.P</p>
+                    <p data-target="#eventos">Eventos</p>
+                </div>             
+            </div>
+            
+            <div class="content">
+                <div data-content id="logistica" class="active">
+                    <h2>Packing</h2>
+                    <section class="form">
+                        <form action="" method="post" onsubmit="areaVerification()">
+
+                            <input type="text" id="personas-recibe" name="persona-recibe" placeholder="Persona que recibe" required>
+
+                            <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad">
+                            
+                            <input type="text" id="direccion" name="direccion" placeholder="Dirrección" required>
+                        
+                            <input type="number" name="telefonoPacking" id="telefonoPacking" min="10" placeholder="Telefono"> 
+                                                   
+                            <input type="email" name="mail-logistica" id="mail-logistica" placeholder="Email" required>
+                                                            
+                            <input type="text" id="tipo-producto" name="tipo-producto" placeholder="Tipo de producto" required>
+                                                        
+                            <input type="text" name="cantidadPacking" id="cantidadPacking" placeholder="Cantidad" required>
+
+                            <section class="fecha">
+                                <label for="fecha-packing">Fecha De entrega</label>
+                                <input type="date" name="fecha" id="fecha" placeholder="Fecha" required>
+                            </section>
+
+                            <textarea name="observacion" id="observacion" cols="113" rows="5" placeholder="Observaciones"></textarea>
+                            
+                            <input type="file" name="archivos-logistica" id="archivos-logistica" accept=".xlsx">
+                            
+                            <button type="submit" class="btn btn-primary w-100 fs-5" id="submit" name="submit" onclick="verificationCode()" >Reservar</button>
+                            <br>
+                            <br>     
+                            <button type="reset" class="btn btn-primary w-100 fs-5" id="reiniciar" name="reiniciar" onclick="confirmMesssage()">Reestablecer</button>               
+                        </form>
+                    </section>            
+                </div>
+        
+                <div data-content id="materialP">
+                    <h2>Material P.O.P</h2>
+                    <form action="" onsubmit="areaVerification()">
+                        <section class="form">
+
+                            <!-- CHECKBOX -->
+                            <section class="combo-box">
+                                <label for="Objetos" class="tittle-box">Objetos</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="esferos" id="flexCheckDefault campo">
+                                    <label class="form-check-label" for="flexCheckDefault">Esferos</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="agendas" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Agendas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="posillos" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Posillos
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="llaveros" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Llaveros
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="otros" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Otros:
+                                    </label>
+                                </div>
+                                
+                                <input type="text" name="cuales" id="cuales" placeholder="¿Cuales?">
+        
+                                <!-- CANTIDAD -->
+                                
+                                <input type="number" name="cantidad-cuaderno" id="cantidad-cuaderno" placeholder="Cantidad de Esferos">
+                                
+                                <input type="number" name="cantidad--posillos" id="cantidad--posillos" placeholder="Cantidad de Agendas">                             
+                                
+                                <input type="number" name="cantidad-esferos" id="cantidad-esferos" placeholder="Cantidad de Posillos">
+                                
+                                <input type="number" name="cantidad-portapapeles" id="cantidad-portapapeles" placeholder="Cantidad de Llaveros">                              
+                                
+                                <input type="number" name="cantidad-llaveros" id="cantidad-llaveros" placeholder="cantidad de Otros">                         
+                                
+                                <section class="fecha">
+                                    <label for="fecha-material">Fecha De entrega</label>
+                                    <input type="date" name="fecha-material" id="fecha-material" placeholder="Fecha" required>
+                                </section>
+
+                                <textarea name="detalles" id="detalles" cols="113" rows="5" placeholder="Detalles "></textarea>
+
+                                <input type="file" name="archivos-material" id="archivos-material">
+
+                                <h2 id="tituloDestinatario">Información Destinatario</h2>
+
+                                <input type="text" name="nombre" id="nombre" placeholder="Nombre " required>
+                               
+                                <input type="tel" name="telefono" id="telefono" max="10" placeholder="Número Telefonico" required> 
+                                
+                                <input type="text" name="ubicacion-material" id="ubicacion-material" placeholder="Localidad" required>
+
+                                <input type="text" id="direccion" name="direccion" placeholder="Dirrección" required>
+                                                                
+                                <button type="submit" class="btn btn-primary w-100 fs-5">Reservar</button>
+                                <br>
+                                <br>
+                                <button type="reset" class="btn btn-primary w-100 fs-5" id="reiniciar" name="reiniciar" onclick="confirmMesssage()">Reestablecer</button>    
+
+                            </section>
+                        </section>                                                         
+                    </form>                           
+                </div>
+                 
+                <div data-content id="eventos">
+                    <h2>Eventos</h2>   
+                    <form action="" onsubmit="areaVerification()">
+                        <section class="form">
+                            
+                            <select name="tipoEvento" id="tipoEvento">
+                                <option value="0">--Seleccione Tipo Evento--</option>
+                                <option value="1">Lanzamiento de producto</option>
+                                <option value="2">Presentacion marca</option>
+                                <option value="3">Inauguración</option>
+                            </select>
+
+                            <input type="text" name="nombre-eventos" id="nombre-eventos" placeholder="Nombre del Evento" required>
+                    
+                            <input type="text" name="mailEventos" id="mailEventos" placeholder="Email" required>
+
+                            <input type="tel" name="telEvento" id="televento" max="10" placeholder="Teléfono" required> 
+                            
+                            <input type="text" name="cantidad" id="direccion" placeholder="Direccion" required> 
+                          
+                            <input type="text" name="cantidad" id="Localidad" placeholder="Localidad" required>
+                             
+                            <input type="text" name="numlocal" id="numlocal" placeholder="Numero del local">       
+                            
+                            <section class="fecha">
+                                <label for="fecha.evento">Fecha </label>
+                                <input type="date" name="fecha-eventos" id="fecha-eventos">
+                            </section>
+
+                            <textarea name="descripcioneventos" id="descripcion" cols="113" rows="5" placeholder="Descripcion de Evento"></textarea>
+
+                            <textarea name="detalleseventos" id="detalles" cols="113" rows="5" placeholder="Detalles de Evento"></textarea>
+
+                            <button type="submit" class="btn btn-primary w-100 fs-5">Reservar</button>
+                            <br>
+                            <br>
+                            <button type="reset" class="btn btn-primary w-100 fs-5" id="reiniciar" name="reiniciar" onclick="confirmMesssage()">Reestablecer</button>    
+
+                        </section>                   
+                    </form>  
+                </div>
+    
+            </div>
+
+        </div>
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="box">
+                <h2>Contáctanos</h2>
+                <p>Tel. 3172224453</p>
+                <p>yelmosltda@yahoo.es</p>
+            </div>
+            <div class="box">
+                <h2>Encuéntranos</h2>
+                <p>Carrera 70D #79-15</p>
+            </div>
+            <div class="box">
+                <h2>Síguenos</h2>
+                <a href="" class="icons">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="" class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <small>&copy;  2022 <b>Gestion y control Yelmos</b> - Todos los Derechos Reservados</small>
+        </div>    
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>  
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despachos</title>
+    <link rel="stylesheet" href="/styles/despachos.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="/script/Despacho.js"></script>
+	<script src="https://kit.fontawesome.com/1d159cd404.js" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+<body>
+	<header class="header">
+    <div class="container logo-nav-container">
+        <a href="#" class="logo"><img src="/img/Logo Team Digital Yelmos.jpeg" alt=""></a>
+        <nav class="main-nav">
+            <ul class="list-main-nav">
+                <li class="nav-item"><a href="/iniciovistagerente.html">Inicio</a></li>
+                <li class="nav-item"><a href="/despachos.html">Despachos</a></li>
+                <li class="nav-item"><a href="/inventarios.html">Inventarios</a></li>
+                <li class="nav-item"><a href="/eventos.html">Eventos</a></li> 
+                <li class="nav-item" id="sign-up"><a href="/reservaslogin.html">Reservas</a></li>
+                <li class="nav-item"><a href="/proveedores.html">Proveedor</a></li> 
+                <li class="nav-item"><a href="/clientes.html">Cliente</a></li>
+				<a href="/index.html" class="icons-nav">
+					<i class="fa-solid fa-right-to-bracket"></i>
+				</a> 
+            </ul>
+        </nav>
+    </div>
+</header>
+	<main class="main">
+		<div class="container-xl">
+				<div class="titulo">
+					<div class="row">
+						<div class="col-sm-5">
+							<h2><b>Despachos</b></h2>
+						</div>
+						<div class="col-sm-7">
+							<div  class="btn-group" data-toggle="buttons">
+								<div class="buscar">
+									<input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Busca la entrega...">
+								</div>
+								<label class="btn btn-info active">
+									<input type="radio" name="status" value="all" checked="checked">Todas
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="status" value="activa">Activas
+								</label>
+								<label class="btn btn-warning">
+									<input type="radio" name="status" value="pendiente">Entregadas
+								</label>
+								<label class="btn btn-danger">
+									<input type="radio" name="status" value="cancelada">Canceladas
+								</label>							
+							</div>
+						</div>
+					</div>
+				</div>
+				<table id="myTable" class="table table-striped table-hover">
+					<thead>
+						<tr >
+							<th>#</th>
+							<th>Cliente</th>
+							<th>Destinatario</th>
+							<th>Telefono</th>
+							<th>Fecha</th>
+							<th>Direccion</th>
+							<th>Cantidad</th>
+							<th>Detalles</th>  
+							<th>Estado</th>
+							<th>Edit/Delete</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr data-status="pendiente">
+							<td>1</td>
+							<td>Fabian Espinoza</td>
+							<td>Gabriel Ochoa</td>
+							<td>3196291845</td>
+							<td>04/10/2022</td>                        
+							<td>Calle 20 #21D 26 </td>
+							<td>66</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-warning">&bull;</span> Entregada</td>
+							<td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="activa">
+							<td>2</td>
+							<td>Fabian Espinoza</td>
+							<td>Alison Rodrigez</a></td>
+							<td>3147041062</td>
+							<td>05/08/2022</td>                       
+							<td>Calle 78 #21 40</td>
+							<td>32</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-success">&bull;</span> Activa</td>
+							<td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="cancelada">
+							<td>3</td>
+							<td>Fabian Espinoza</td>
+							<td>Andres Barbosa</a></td>
+							<td>3111265709</td>
+							<td>11/05/2022</td>
+							<td>Calle 47 Sur #19 48</td>
+							<td>45</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-danger">&bull;</span> Cancelada</td>                      
+							<td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>                        
+						</tr>
+						<tr data-status="activa">
+							<td>4</td>
+							<td>Fabian Espinoza</td>
+							<td>Joan Carvajal</a></td>
+							<td>3156555186</td>
+							<td>06/09/2022</td>
+							<td>Calle 52 #42 03</td>
+							<td>61</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-success">&bull;</span> Activa</td>
+							<td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="pendiente">
+							<td>5</td>
+							<td>Fabian Espinoza</td>
+							<td>Carol Uribe</a></td>
+							<td>3153924375</td>
+							<td>12/08/2022</td>                        
+							<td>Calle 27 Sur #25 10</td>
+							<td>100</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-warning">&bull;</span> Entregada</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="pendiente">
+							<td>6</td>
+							<td>Alejandro Ramirez</td>
+							<td>María Caicedo </a></td>
+							<td>3118125782</td>
+							<td>10/05/2022</td>                        
+							<td>Calle 50 #38N 18</td>
+							<td>80</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-warning">&bull;</span>Entregada</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="cancelada">
+							<td>7</td>
+							<td>Alejandro Ramirez</td>
+							<td>Julieta Huesos</a></td>
+							<td>3175784324</td>
+							<td>11/06/2022</td>                        
+							<td>Calle 120 #25 23</td>
+							<td>67</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-danger">&bull;</span> Cancelada</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="cancelada">
+							<td>8</td>
+							<td>Alejandro Ramirez</td>
+							<td>Sofía del Río</a></td>
+							<td>3146982808</td>
+							<td>15/06/2022</td>                        
+							<td>Calle 14 #219 D 50</td>
+							<td>30</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-danger">&bull;</span> Cancelada</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="pendiente">
+							<td>9</td>
+							<td>Alejandro Ramirez</td>
+							<td>Ana María </a></td>
+							<td>3002236598</td>
+							<td>17/07/2022</td>                        
+							<td>Calle 14 #219 D 50</td>
+							<td>10</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-warning">&bull;</span> Entregada</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="activa">
+							<td>10</td>
+							<td>Alejandro Ramirez</td>
+							<td>Matías de Greiff Rincón</a></td>
+							<td>3197445168</td>
+							<td>20/06/2022</td>                        
+							<td>Calle 14 #219 D 50</td>
+							<td>150</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-success">&bull;</span> Activa</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="pendiente">
+							<td>11</td>
+							<td>Gabriel Sanchez</td>
+							<td>Carol Fernández.</a></td>
+							<td>3159848026</td>
+							<td>14/06/2022</td>                        
+							<td>Calle 14 #219 D 50</td>
+							<td>35</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-warning">&bull;</span> Entregada</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="pendiente">
+							<td>12</td>
+							<td>Gabriel Sanchez</td>
+							<td>Harold Díaz</a></td>
+							<td>3184880446</td>
+							<td>24/06/2022</td>                        
+							<td>Calle 14 #219 D 50</td>
+							<td>39</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-warning">&bull;</span> Entregada</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="pendiente">
+							<td>13</td>
+							<td>Gabriel Sanchez</td>
+							<td>Fabrico Gómez</a></td>
+							<td>3115287484</td>
+							<td>18/05/2022</td>                        
+							<td>Calle 14 #219 D 50</td>
+							<td>34</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-warning">&bull;</span> Entregada</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="activa">
+							<td>14</td>
+							<td>Gabriel Sanchez</td>
+							<td>Manil Quiroga</a></td>
+							<td>3124170363</td>
+							<td>19/04/2022</td>                        
+							<td>Calle 14 #219 D 50</td>
+							<td>59</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-success">&bull;</span> Activa</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="activa">
+							<td>15</td>
+							<td>Gabriel Sanchez</td>
+							<td>Esporcito Sosa</a></td>
+							<td>3002236598</td>
+							<td>12/06/2022</td>                        
+							<td>Calle 14 #219 D 50</td>
+							<td>11</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-success">&bull;</span> Activa</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="cancelada">
+							<td>16</td>
+							<td>Gabriel Sanchez</td>
+							<td> María Cristina</a></td>
+							<td>3187131212</td>
+							<td>12/05/2022</td>                        
+							<td>Calle 14 #219 D 50</td>
+							<td>1</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-danger">&bull;</span> Cancelada</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="activa">
+							<td>17</td>
+							<td>Gabriel Sanchez</td>
+							<td>Carlos Alberto</a></td>
+							<td>3125377117</td>
+							<td>15/05/2022</td>                        
+							<td>Calle 14 #219 D 50</td>
+							<td>34</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-success">&bull;</span> Activa</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="pendiente">
+							<td>18</td>
+							<td>Juan Valencia</td>
+							<td>Adriana Hernandez</a></td>
+							<td>3100830889</td>
+							<td>25/08/2022</td>                        
+							<td>Calle 14 #219 D 50</td>
+							<td>61</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-warning">&bull;</span> Entregada</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="activa">
+							<td>19</td>
+							<td>Juan Valencia</td>
+							<td>Ximena Lucia</a></td>
+							<td>3019145823</td>
+							<td>18/06/2022</td>                        
+							<td>Calle 14 #219 D 50</td>
+							<td>37</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-success">&bull;</span> Activa</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="pendiente">
+							<td>20</td>
+							<td>Juan Valencia</td>
+							<td>Juan Manuel</a></td>
+							<td>3177234690</td>
+							<td>25/06/2022</td>                        
+							<td>Calle 14 #219 D 50</td>
+							<td>35</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-warning">&bull;</span> Entregada</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="cancelada">
+							<td>21</td>
+							<td>Juan Valencia</td>
+							<td>Carricho Paloma</a></td>
+							<td>3104464240</td>
+							<td>08/06/2022</td>                        
+							<td>Calle 14 #219 D 50</td>
+							<td>40</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-danger">&bull;</span> Cancelada</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+						<tr data-status="`pendiente">
+							<td>22</td>
+							<td>Juan Valencia</td>
+							<td>Estepha Leon</a></td>
+							<td>3104627383</td>
+							<td>12/06/2022</td>                        
+							<td>Calle 14 #219 D 50</td>
+							<td>95</td>
+							<td>Sin Detalles</td>
+							<td><span class="status text-warning">&bull;</span> Entregada</td>
+						    <td>
+								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+				<div class="Generar">
+					<button class="btn btn-light" value="" onclick="exportTableToExcel('myTable')">Generar Reporte</button>
+				</div>
+			</div>
+
+<!-- Edit -->
+<div id="editEmployeeModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="signup-form">
+				<form action="/examples/actions/confirmation.php" method="post">
+					<h2>Agregar Entrega</h2>
+					<p>Agregue datos de la nueva entrega</p>
+					<hr>
+					<div class="form-group">
+						<div class="row">
+							<div class="col"><input type="text" class="form-control" name="first_name" placeholder="Nombre cliente" required="required"></div>
+							<div class="col"><input type="text" class="form-control" name="last_name" placeholder="Apellido cliente" required="required"></div>
+						</div>        	
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="first_name" placeholder="Direccion de la entrega"required="required">
+					</div>
+					<div class="form-group">
+						<input type="date" class="form-control" id="start" name="trip-start">
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
+						<input type="submit" class="btn btn-danger" value="Agregar">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Delete -->
+	<div id="deleteEmployeeModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form>
+					<div class="modal-header">						
+						<h4 class="modal-title ">Eliminar Entrega</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">					
+						<p>¿Deseas elminar esta entrega?</p>
+						<p ><small>Esta accion no se puede deshacer</small></p>
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+						<input type="submit" class="btn btn-danger" value="Eliminar">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="editoEmployeeModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="signup-form">
+					<form action="" method="post">
+						<h2>Agregar Entrega</h2>
+						<p>Agregue datos de la nueva entrega</p>
+						<hr>
+						<div class="form-group">
+							<div class="row">
+								<div class="col">
+									<select type="text" class="form-control" id="inputPhone" placeholder="Tipo producto" required>
+                                    <option value="value1">Producto 1</option>
+                                    <option value="value2">Producto 2</option>
+                                    <option value="value3">Producto 3</option>
+                                  </select>
+								</div>
+								<div class="col"><input type="number" class="form-control" id="inputCant" required min="0" max="100" step="10" value="30"></div>
+							</div>        	
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" name="email" placeholder="Email" required="required">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" name="Telefono" placeholder="Telefono" required="required">
+						</div>
+						<div class="form-group">
+							<input type="date" class="form-control" name="party" placeholder="Fecha de Entrega" min="2022-04-01" max="2022-05-5">
+						</div>
+						<div class="modal-footer">
+							<input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
+							<input type="submit" class="btn btn-danger" value="Agregar">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</main>    
+</body>
+</html>
