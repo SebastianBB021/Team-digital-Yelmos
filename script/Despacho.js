@@ -58,7 +58,12 @@ function myFunction() {
   /* //////////////////////// */
 
 /* Generar Reporte */
-function exportTableToExcel(myTable, filename = ''){
+
+
+
+
+
+/* function exportTableToExcel(myTable, filename = ''){
     var downloadLink;
     var dataType = 'application/vnd.ms-excel';
     var tableSelect = document.getElementById(myTable);
@@ -88,4 +93,4 @@ function exportTableToExcel(myTable, filename = ''){
          downloadLink.click();
        
     }
-}
+} */
