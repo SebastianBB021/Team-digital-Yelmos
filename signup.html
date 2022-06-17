@@ -41,9 +41,9 @@
               <h5>Crear Cuenta</h5>
               <input class="controls" type="text" name="name" value="" placeholder="Nombres" required>
               <input class="controls" type="text" name="lastName" value="" placeholder="Apellidos" required>
-              <input class="controls" type="text" name="documento" value="" id="documento" placeholder="Numero documento">
+              <input class="controls" type="text" name="documento" value="" id="documento" placeholder="Numero documento" onkeypress="return valideKey(event);">
               <input class="controls" type="email" name="mail" value="" placeholder="Email" required>
-              <input class="controls w-95 input-total" type="tel" name="celular" value="" placeholder="Numero de Celular" min="10" required>
+              <input class="controls w-95 input-total" type="tel" name="celular" value="" placeholder="Numero de Celular" min="10" required onkeypress="return valideKey(event);">
               <input class="controls input-total mb-3" type="password" name="contrasena" value="" placeholder="Contraseña" required>
               <!-- <a href="/iniciocliente.html"> -->
               <input class="buttons" type="submit" name="" value="Ingresar">

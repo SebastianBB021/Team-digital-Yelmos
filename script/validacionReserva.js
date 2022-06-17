@@ -1,73 +1,339 @@
-//funcion para confirmacion de reestablecer valores
-function confirmMesssage(){
-    window.confirm("Esta seguro de reestablecer la infomración?")
-}
 
-//funcion para evaluar alguna ultima informacion o observacion de la reserva
-function verificationCode(){
-    window.prompt("Tienes alguna observacion?")
-}
+/* Validacion Packing */
+window.addEventListener('load', ()=> {
+    const form = document.querySelector('#formulario')
+    const usuario = document.getElementById('usuario')
+    const ciuadad = document.getElementById('ciuadad')
+    const Direccion = document.getElementById('Direccion')
+    const Telefono = document.getElementById('Telefono')
+    const Tipo = document.getElementById('Tipo')
+    const Cantidad = document.getElementById('Cantidad')
+    const email = document.getElementById('email')
+    const Fecha = document.getElementById('Fecha')
+    const Observacion = document.getElementById('Observacion')
 
-//validacion de campo de texto
-function areaVerification(){
-    observacion = document.getElementById("ciudad").value;
-    cantidad = document.getElementById("cantidadPacking").value;
-    indice = document.getElementById("tipoEvento");
-    mail =document.getElementById("mailEventos").value;
-    phoneEvent = document.getElementById("telEvento").value;
-    var ano = document.getElementById("ano").value;
-    var mes = document.getElementById("mes").value;
-    var dia = document.getElementById("dia").value;
-    articulo = document.getElementById("campo");
-    documento = document.getElementById("documento").value;
-
-    //validacion un campo de texto obligatorio
-    if( observacion== null || observacion.length == 0 || /^\s+$/.test(observacion) ) {
-        alert("Escriba una ciudad")
-        return false;
-    }
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        validaCampos()
+    })
     
-    //Validacion un campo de texto con valores numéricos
-    if(isNaN(cantidad)) {
-        alert("Digite un numero en este campo")
-        return false;
+    const validaCampos = ()=> {
+        //capturar los valores ingresados por el usuario
+        const usuarioValor = usuario.value.trim()
+        const ciuadadValor = ciuadad.value.trim()
+        const DireccionValor = Direccion.value.trim()
+        const TelefonoValor = Telefono.value.trim()
+        const TipoValor = Tipo.value.trim()
+        const CantidadValor = Cantidad.value.trim()
+        const emailValor = email.value.trim()
+        const FechaValor = Fecha.value.trim()
+        const ObservacionValor = Observacion.value.trim();
+     
+        //validando campo usuario
+        //(!usuarioValor) ? console.log('CAMPO VACIO') : console.log(usuarioValor)
+        if(!usuarioValor){
+            //console.log('CAMPO VACIO')
+            validaFalla(usuario, 'Llene este espacio')
+        }else{
+            validaOk(usuario)
+        }
+        if(!ciuadadValor){
+            //console.log('CAMPO VACIO')
+            validaFalla(ciuadad, 'Llene este espacio')
+        }else{
+            validaOk(ciuadad)
+        }
+
+        if(!DireccionValor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Direccion, 'Llene este espacio')
+        }else{
+            validaOk(Direccion)
+        }
+
+        if(!TelefonoValor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Telefono, 'Llene este espacio')
+        }else{
+            validaOk(Telefono)
+        }
+
+        if(!TipoValor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Tipo, 'Llene este espacio')
+        }else{
+            validaOk(Tipo)
+        }
+        if(!CantidadValor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Cantidad, 'Llene este espacio')
+        }else{
+            validaOk(Cantidad)
+        }
+        if(!FechaValor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Fecha, 'Llene este espacio')
+        }else{
+            validaOk(Fecha)
+        }
+        if(!ObservacionValor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Observacion, 'Llene este espacio')
+        }else{
+            validaOk(Observacion)
+        }
+        
+
+        //validando campo email
+        if(!emailValor){
+            validaFalla(email, 'Llene este espacio')            
+        }else if(!validaEmail(emailValor)) {
+            validaFalla(email, 'El e-mail no es válido')
+        }else {
+            validaOk(email)
+        }
+        
+        /* Validacion de correcto/incorrecto */
     }
 
-    // Validacion de seleccionado una opción de una lista
-    if(indice == null || indice == 0 ) {
-        alert("seleccione un tipo de evento")
-        return false;
+    const validaFalla = (input, msje) => {
+        const formControl = input.parentElement
+        const aviso = formControl.querySelector('p')
+        aviso.innerText = msje
+
+        formControl.className = 'form-control falla'
+    }
+    const validaOk = (input, msje) => {
+        const formControl = input.parentElement
+        formControl.className = 'form-control ok'
     }
 
-    // Validacion de email
-    if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(mail)) ) {
-        alert("digite un correo electronico valido")
-        return false;
+    const validaEmail = (email) => {
+        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);        
     }
 
-    // Validacion fecha
-    valor = new Date(ano, mes, dia);
-    if( !isNaN(valor) ) {
-        alert("Digite una fecha valida")
-        return false;
+})
+/* ************************** */
+/* Validacion Material P.O.P */
+window.addEventListener('load', ()=> {
+    const form = document.querySelector('#formulario2')
+    const Cuales = document.getElementById('Cuales')
+    const Cantidad0 = document.getElementById('Cantidad0')
+    const Cantidad1 = document.getElementById('Cantidad1')
+    const Cantidad2 = document.getElementById('Cantidad2')
+    const Cantidad3 = document.getElementById('Cantidad3')
+    const Cantidad4 = document.getElementById('Cantidad4')
+    const Fecha1 = document.getElementById('Fecha1')
+    const Detalle = document.getElementById('Detalle')
+    const Nombre = document.getElementById('Nombre')
+    const Numero = document.getElementById('Numero')
+    const Localidad = document.getElementById('Localidad')
+    const Direccion1 = document.getElementById('Direccion1')
+    const Email = document.getElementById('Email')
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        validaCampos()
+    })
+    
+    const validaCampos = ()=> {
+        //capturar los valores ingresados por el usuario
+        const CualesValor = Cuales.value.trim()
+        const Cantidad0Valor = Cantidad0.value.trim()
+        const Cantidad1Valor = Cantidad1.value.trim()
+        const Cantidad2Valor = Cantidad2.value.trim()
+        const Cantidad3Valor = Cantidad3.value.trim()
+        const Cantidad4Valor = Cantidad4.value.trim()
+        const Fecha1Valor = Fecha1.value.trim()
+        const DetalleValor = Detalle.value.trim();
+        const NombreValor = Nombre.value.trim();
+        const NumeroValor = Numero.value.trim();
+        const LocalidadValor = Localidad.value.trim();
+        const Direccion1Valor = Direccion.value.trim();
+        const EmailValor = Email.value.trim();
+     
+        //validando campo usuario
+        //(!usuarioValor) ? console.log('CAMPO VACIO') : console.log(usuarioValor)
+        if(!CualesValor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Cuales, 'Campo vacío')
+        }else{
+            validaOk(Cuales)
+        }
+        if(!Cantidad0Valor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Cantidad0, 'Campo vacío')
+        }else{
+            validaOk(Cantidad0)
+        }
+
+        if(!Cantidad1Valor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Cantidad1, 'Campo vacío')
+        }else{
+            validaOk(Cantidad1)
+        }
+
+        if(!Cantidad2Valor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Cantidad2, 'Campo vacío')
+        }else{
+            validaOk(Cantidad2)
+        }
+
+        if(!Cantidad3Valor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Cantidad3, 'Campo vacío')
+        }else{
+            validaOk(Cantidad3)
+        }
+        if(!Cantidad4Valor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Cantidad4, 'Campo vacío')
+        }else{
+            validaOk(Cantidad4)
+        }
+        if(!Fecha1Valor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Fecha1, 'Campo vacío')
+        }else{
+            validaOk(Fecha1)
+        }
+        if(!DetalleValor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Detalle, 'Campo vacío')
+        }else{
+            validaOk(Detalle)
+        }
+        if(!NombreValor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Nombre, 'Campo vacío')
+        }else{
+            validaOk(Nombre)
+        }
+        if(!NumeroValor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Numero, 'Campo vacío')
+        }else{
+            validaOk(Numero)
+        }
+        if(!LocalidadValor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Localidad, 'Campo vacío')
+        }else{
+            validaOk(Localidad)
+        }
+        if(!Direccion1Valor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Direccion1, 'Campo vacío')
+        }else{
+            validaOk(Direccion1)
+        }        
+        
+        
+         //validando campo email
+        if(!EmailValor){
+            validaFalla(Email, 'Campo vacío')            
+        }else if(!validaEmail(EmailValor)) {
+            validaFalla(Email, 'El e-mail no es válido')
+        }else {
+            validaOk(Email)
+        }
+
+
+
+/*         
+         const er = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}$/          
+         if(!passValor) {
+             validaFalla(pass, 'Campo vacío')
+         } else if (passValor.length < 8) {             
+             validaFalla(pass, 'Debe tener 8 caracteres cómo mínimo.')
+         } else if (!passValor.match(er)) {
+             validaFalla(pass, 'Debe tener al menos una may., una min. y un núm.')
+         } else {
+             validaOk(pass)
+         }
+    
+          
+    
+         if(!passConfirmaValor){
+             validaFalla(passConfirma, 'Confirme su password')
+         } else if(passValor !== passConfirmaValor) {
+             validaFalla(passConfirma, 'La password no coincide')
+         } else {
+             validaOk(passConfirma)
+         }
+
+ */
     }
 
-    if( !(/^\d{10}$/.test(documento)) ) {
-        alert("Verifique el numero de documento digitado")
-        return false;
-      }
+    const validaFalla = (input, msje) => {
+        const formControl = input.parentElement
+        const aviso = formControl.querySelector('p')
+        aviso.innerText = msje
 
-    // Validar un número de teléfono
-    if( !(/^\d{3}-\d{3}-\d{4}$/.test(phoneEvent)) ) {
-        alert("digite un numero valido")
-        return false;
+        formControl.className = 'form-control falla'
+    }
+    const validaOk = (input, msje) => {
+        const formControl = input.parentElement
+        formControl.className = 'form-control ok'
     }
 
-    //Validacion checkbox
-    if( !articulo.checked ) {
-        alert("Por favor, seleccione al menos un articulo ")
-        return false;
+    const validaEmail = (email) => {
+        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);        
     }
 
+})
+
+/* ************************** */
+
+
+/* Validar solo nuemores */
+/* *********************** */
+/* *********************** */
+/* *********************** */
+function valideKey(evt){
+    
+    // code is the decimal ASCII representation of the pressed key.
+    var code = (evt.which) ? evt.which : evt.keyCode;
+    
+    if(code==8) { // backspace.
+      return true;
+    } else if(code>=48 && code<=57) { // is a number.
+      return true;
+    } else{ // other keys.
+      return false;
+    }
+} 
+
+/* Solo letras  */
+/* ********************** */
+/* ********************** */
+/* ********************** */
+/* ********************** */
+function soloLetras(e) {
+    key = e.keyCode || e.which;
+    tecla = String.fromCharCode(key).toLowerCase();
+    letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+    especiales = [8, 37, 39, 46];
+
+    tecla_especial = false
+    for(var i in especiales) {
+        if(key == especiales[i]) {
+            tecla_especial = true;
+            break;
+        }
+    }
+
+    if(letras.indexOf(tecla) == -1 && !tecla_especial)
+        return false;
 }
 
+function limpia() {
+    var val = document.getElementById("miInput").value;
+    var tam = val.length;
+    for(i = 0; i < tam; i++) {
+        if(!isNaN(val[i]))
+            document.getElementById("miInput").value = '';
+    }
+}

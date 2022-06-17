@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/footer.css">
     <script src="https://kit.fontawesome.com/e87692bdd7.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="/script/pestañas.js" defer></script>
+    <script src="script/pestañas.js" defer></script>
     <script src="script/validacionReserva.js"></script>
 </head>
 <body>
@@ -49,117 +49,190 @@
             <div class="content">
                 <div data-content id="logistica" class="active">
                     <h2>Packing</h2>
-                    <section class="form">
-                        <form action="" method="post" onsubmit="areaVerification()">
+                    <!-- <section class="form"> -->
+                        <form action="" method=""  id="formulario">
+                            <div class="Flex">
+                            <div class="form-control">
+                                <label for="usuario">Perosna que resive</label>
+                                <input id="usuario" type="text" onkeypress="return soloLetras(event)">
+                                <p></p>                
+                            </div>
+                
+                            <div class="form-control">
+                                <label for="ciuadad">Ciudad</label>
+                                <input id="ciuadad" type="text" onkeypress="return soloLetras(event)">
+                                <p></p>                
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="form-control">
+                                <label for="Direccion">Direccion</label>
+                                <input id="Direccion" type="text" >
+                                <p></p>                
+                            </div>
+                            <div class="form-control">
+                                <label for="Telefono">Telefono</label>
+                                <input id="Telefono" type="text" onkeypress="return valideKey(event);">
+                                <p></p>                
+                            </div>
+                        </div>
+                        <div class="Flex">
+                            <div class="form-control">
+                                <label for="Tipo">Tipo Producto</label>
+                                <input id="Tipo" type="text" onkeypress="return soloLetras(event)">
+                                <p></p>                
+                            </div>
+                
+                            <div class="form-control">
+                                <label for="email">E-mail</label>
+                                <input id="email" type="email">
+                                <p></p>                
+                            </div>
+                        </div>
+                        <div class="Flex">
+                            <div class="form-control">
+                                <label for="Cantidad">Cantidad</label>
+                                <input id="Cantidad" type="text" onkeypress="return valideKey(event);">
+                                <p></p>                
+                            </div>
+                
+                            <div class="form-control">
+                                <label for="Fecha">Fechada de Entrega</label>
+                                <input id="Fecha" type="date">
+                                <p></p>                
+                            </div>
+                        </div>
+                
+                            <div class="form-control">
+                                <label for="Observacion">Observacion</label>
+                                <input id="Observacion" type="Observacion">
+                                <p></p>                
+                            </div>
 
-                            <input type="text" id="personas-recibe" name="persona-recibe" placeholder="Persona que recibe" required>
-
-                            <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad">
-                            
-                            <input type="text" id="direccion" name="direccion" placeholder="Dirrección" required>
+                            <button type="submit">Enviar</button>
                         
-                            <input type="number" name="telefonoPacking" id="telefonoPacking" min="10" placeholder="Telefono"> 
-                                                   
-                            <input type="email" name="mail-logistica" id="mail-logistica" placeholder="Email" required>
-                                                            
-                            <input type="text" id="tipo-producto" name="tipo-producto" placeholder="Tipo de producto" required>
-                                                        
-                            <input type="text" name="cantidadPacking" id="cantidadPacking" placeholder="Cantidad" required>
-
-                            <section class="fecha">
-                                <label for="fecha-packing">Fecha De entrega</label>
-                                <input type="date" name="fecha" id="fecha" placeholder="Fecha" required>
-                            </section>
-
-                            <textarea name="observacion" id="observacion" cols="113" rows="5" placeholder="Observaciones"></textarea>
-                            
-                            <input type="file" name="archivos-logistica" id="archivos-logistica" accept=".xlsx">
-                            
-                            <button type="submit" class="btn btn-primary w-100 fs-5" id="submit" name="submit" onclick="verificationCode()" >Reservar</button>
-                            <br>
-                            <br>     
-                            <button type="reset" class="btn btn-primary w-100 fs-5" id="reiniciar" name="reiniciar" onclick="confirmMesssage()">Reestablecer</button>               
                         </form>
-                    </section>            
+                    <!-- </section>  -->           
                 </div>
         
                 <div data-content id="materialP">
                     <h2>Material P.O.P</h2>
-                    <form action="" onsubmit="areaVerification()">
-                        <section class="form">
+                    <form id="formulario2" action="" onsubmit="areaVerification()">
 
-                            <!-- CHECKBOX -->
-                            <section class="combo-box">
-                                <label for="Objetos" class="tittle-box">Objetos</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="esferos" id="flexCheckDefault campo">
-                                    <label class="form-check-label" for="flexCheckDefault">Esferos</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="agendas" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Agendas
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="posillos" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Posillos
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="llaveros" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Llaveros
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="otros" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Otros:
-                                    </label>
-                                </div>
-                                
-                                <input type="text" name="cuales" id="cuales" placeholder="¿Cuales?">
-        
-                                <!-- CANTIDAD -->
-                                
-                                <input type="number" name="cantidad-cuaderno" id="cantidad-cuaderno" placeholder="Cantidad de Esferos">
-                                
-                                <input type="number" name="cantidad--posillos" id="cantidad--posillos" placeholder="Cantidad de Agendas">                             
-                                
-                                <input type="number" name="cantidad-esferos" id="cantidad-esferos" placeholder="Cantidad de Posillos">
-                                
-                                <input type="number" name="cantidad-portapapeles" id="cantidad-portapapeles" placeholder="Cantidad de Llaveros">                              
-                                
-                                <input type="number" name="cantidad-llaveros" id="cantidad-llaveros" placeholder="cantidad de Otros">                         
-                                
-                                <section class="fecha">
-                                    <label for="fecha-material">Fecha De entrega</label>
-                                    <input type="date" name="fecha-material" id="fecha-material" placeholder="Fecha" required>
-                                </section>
+                            <!-- Radiuu -->
+             <label for="Objetos" class="tittle-box">Objetos</label>
+             <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="esferos" id="flexCheckDefault campo">
+                <label class="form-check-label" for="flexCheckDefault">Esferos</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="agendas" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                     Agendas
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="posillos" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Posillos
+                    </label>
+                </div>
+                <div class="form-check">
+                     <input class="form-check-input" type="checkbox" value="llaveros" id="flexCheckDefault">
+                     <label class="form-check-label" for="flexCheckDefault">
+                         Llaveros
+                         </label>
+                        </div>
+                        <div class="form-check">
+                             <input class="form-check-input" type="checkbox" value="otros" id="flexCheckDefault">
+                             <label class="form-check-label" for="flexCheckDefault">
+                                Otros:
+                             </label>
+                            </div>
 
-                                <textarea name="detalles" id="detalles" cols="113" rows="5" placeholder="Detalles "></textarea>
+            <!-- ********** -->
+            <!-- ********** -->
 
-                                <input type="file" name="archivos-material" id="archivos-material">
 
-                                <h2 id="tituloDestinatario">Información Destinatario</h2>
+            <div class="form-control">
+                <label for="Cuales">Cuales</label>
+                <input id="Cuales" type="Cuales">
+                <p></p>                
+            </div>
 
-                                <input type="text" name="nombre" id="nombre" placeholder="Nombre " required>
-                               
-                                <input type="tel" name="telefono" id="telefono" max="10" placeholder="Número Telefonico" required> 
-                                
-                                <input type="text" name="ubicacion-material" id="ubicacion-material" placeholder="Localidad" required>
+            <div class="form-control">
+                <label for="Cantidad0">Cantidad Esferos</label>
+                <input id="Cantidad0" type="text">
+                <p></p>                
+            </div>
+            <div class="form-control">
+                <label for="Cantidad1">Cantidad Agendas</label>
+                <input id="Cantidad1" type="text">
+                <p></p>                
+            </div>
+            <div class="form-control">
+                <label for="Cantidad2">Cantidad Posiilos</label>
+                <input id="Cantidad2" type="text" onkeypress="return valideKey(event);">
+                <p></p>                
+            </div>
+            <div class="form-control">
+                <label for="Cantidad3">Cantidad Llveros</label>
+                <input id="Cantidad3" type="text">
+                <p></p>                
+            </div>
+            <div class="form-control">
+                <label for="Cantidad4">Cantidad "Otros"</label>
+                <input id="Cantidad4" type="text">
+                <p></p>                
+            </div>
 
-                                <input type="text" id="direccion" name="direccion" placeholder="Dirrección" required>
-                                                                
-                                <button type="submit" class="btn btn-primary w-100 fs-5">Reservar</button>
-                                <br>
-                                <br>
-                                <button type="reset" class="btn btn-primary w-100 fs-5" id="reiniciar" name="reiniciar" onclick="confirmMesssage()">Reestablecer</button>    
+            <div class="form-control">
+                <label for="Fecha1">Fecha</label>
+                <input id="Fecha1" type="text" onkeypress="return valideKey(event);">
+                <p></p>                
+            </div>
 
-                            </section>
-                        </section>                                                         
+            <div class="form-control">
+                <label for="Detalle">Detalle</label>
+                <input id="Detalle" type="password">
+                <p></p>                
+            </div>
+
+
+            <h2>Informacion Destinatario</h2>
+
+            <div class="form-control">
+                <label for="Nombre">Nombre</label>
+                <input id="Nombre" type="text">
+                <p></p>                
+            </div>
+            
+            <div class="form-control">
+                <label for="Numero">Numero Celular</label>
+                <input id="Numero" type="text">
+                <p></p>                
+            </div>
+
+            <div class="form-control">
+                <label for="Localidad">Localidad</label>
+                <input id="Localidad" type="text">
+                <p></p>                
+            </div>
+
+            <div class="form-control">
+                <label for="Direccion1">Direccion</label>
+                <input id="Direccion1" type="text">
+                <p></p>                
+            </div>
+
+
+            <div class="form-control">
+                <label for="Email">E-mail</label>
+                <input id="Email" type="email">
+                <p></p>                
+            </div>
+
+            <button>Enviar</button>                                                          
                     </form>                           
                 </div>
                  

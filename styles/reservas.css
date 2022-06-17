@@ -68,16 +68,74 @@
 .active[data-content]{
     display: block;
 }
-.fecha{
+.Flex{
+    display: flex;
+}
+
+
+/* Validacion */
+/* ********************* */
+/* ********************* */
+/* ********************* */
+#formulario {
+    padding: 30px 20px;
+}
+
+.form-control {    
+    margin-bottom: 15px;
+    padding-bottom: 25px;
+    position: relative;
+}
+
+.form-control label {
     display: inline-block;
-    width: 45%;
+    margin-bottom: 7px;
+    font:weight 200px
 }
-.fecha input{
-    width: 61%;
+
+.form-control input {
+    border: none;
+    background-color: #ededed;
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 19px;
+    width: 99%;    
 }
-.fecha label{
-    margin-left: 1.4rem;
+.form-control, input:focus {
+    outline: none;
 }
+
+.form-control.ok input {
+    border: 0.1px solid;
+    border-color: #08ffc8;
+}
+.form-control.falla input {
+    border: 0.1px solid;
+    border-color: #fe5f55;
+}
+.form-control p {
+    visibility: hidden;
+    position: absolute;
+    font-size: small;
+    font-weight: 500;
+    text-align: right;
+}
+
+.form-control.falla p {
+    visibility: visible;
+    color:#e74c3c;
+}
+ #formulario button {
+    background: #1074e7;
+    border:1px solid #1074e7;
+    border-radius: 2px;
+    color: #f6f6e9;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+} 
 
 
 

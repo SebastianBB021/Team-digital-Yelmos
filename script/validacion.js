@@ -32,6 +32,11 @@ if (usuarioCliente == "12345678" && password == "administrador123" && rol == "Ad
     window.location = "vistaAdministrador.html";
 return false;
 }
+if (usuarioCliente == "123456789" && password == "cliente12" && rol == "Cliente"){
+    alert ("Bienvenido");
+    window.location = "reservas.html";
+return false;
+}
 }        
 
 
