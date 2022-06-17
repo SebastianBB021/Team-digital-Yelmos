@@ -34,156 +34,285 @@
         </nav>
     </div>
 </header>
-	<main class="main">
+<main class="main">
 	<div class="container-xl">
-		<div class="table-responsive">
-			<div class="table-wrapper">
-				<div class="table-title">
-					<div class="row">
-						<div class="col-sm-5">
-							<h2><b>Clientes</b></h2>
-						</div>
-						<div class="col-sm-7">
-							<a href="#editoEmployeeModal" class="btn btn-secondary" data-toggle="modal"><i class="fa-solid fa-circle-plus"></i> <span>Añadir nuevo Cliente</span></a>
-							<a class="btn btn-primary" href="/404.html" role="button">Generar reporte</a>
-							<div class="btn-group" data-toggle="buttons">
-							
-								<label class="btn btn-success">
-									<input type="radio" name="status" value="active">Activo
-								</label>
-								<label class="btn btn-danger">
-									<input type="radio" name="status" value="expired">Bloqueado
-								</label>							
-							</div>						
+			<div class="titulo">
+				<div class="row">
+					<div class="col-sm-5">
+						<h2><b>Cliente</b></h2>
+					</div>
+					<div class="col-sm-7">
+						<div  class="btn-group" data-toggle="buttons">
+							<div class="agregar">
+								<a href="#editoEmployeeModal" class="btn btn-secondary" data-toggle="modal"><i class="fa-solid fa-circle-plus"></i> <span>Añadir nuevo Cliente</span></a>
+							</div>
+							<div class="buscar">
+								<input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Busca el cliente...">
+							</div>
+							<label class="btn btn-info active">
+								<input type="radio" name="status" value="all" checked="checked">Todos
+							</label>
+							<label class="btn btn-success">
+								<input type="radio" name="status" value="Activo">Activo
+							</label>
+							<label class="btn btn-danger">
+								<input type="radio" name="status" value="Bloqueado">Bloqueado
+							</label>							
 						</div>
 					</div>
 				</div>
-				<table class="table table-striped table-hover">
-					<thead>
-						<tr>
-							<th>ID</th>
-							<th>Tipo Cliente</th>
-							<th>Nombres</th>
-							<th>Apellidos</th>
-                            <th>Email</th>
-                            <th>Numero Celular</th>
-							<th>Estado</th>
-							<th>Edit/Delete</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>Persona Natural</td>
-							<td>Sergio Stevens</td>                        
-							<td>Chisica Cruz </td>
-                            <td>sschisica@misena.edu.co</td>
-                            <td>3219663808</td>
-							<td><span class="status text-success">&bull;</span> Activo </td>
-							<td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Empresa</td>
-							<td>Sergio Stevens</td>                        
-							<td>Chisica Cruz </td>
-                            <td>sschisica@misena.edu.co</td>
-                            <td>3219663808</td>
-							<td><span class="status text-success">&bull;</span> Activo</td>
-							<td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>Empresa</td>
-							<td>Sergio Stevens</td>                        
-							<td>Chisica Cruz </td>
-                            <td>sschisica@misena.edu.co</td>
-                            <td>3219663808</td>
-							<td><span class="status text-danger">&bull;</span> Bloqueado </td>                      
-							<td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>                        
-						</tr>
-						<tr>
-							<td>4</td>
-							<td>Persona Natural</td>
-							<td>Sergio Stevens</td>                        
-							<td>Chisica Cruz </td>
-                            <td>sschisica@misena.edu.co</td>
-                            <td>3219663808</td>
-							<td><span class="status text-success">&bull;</span> Activo</td>
-							<td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td>5</td>
-							<td>Empresa</td>
-							<td>Sergio Stevens</td>                        
-							<td>Chisica Cruz </td>
-                            <td>sschisica@misena.edu.co</td>
-                            <td>3219663808</td>
-							<td><span class="status text-danger">&bull;</span> Bloqueado </td>                      
-							<td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>                        
-						</tr>
-					</tbody>
-				</table>
-				<div class="clearfix">
-					<div class="hint-text"></div>
-					<ul class="pagination">
-						<li class="page-item disabled"><a href="#">Anterior</a></li>
-						<li class="page-item active"><a href="#" class="page-link">1</a></li>
-						<li class="page-item"><a href="#" class="page-link">2</a></li>
-						<li class="page-item"><a href="#" class="page-link">3</a></li>
-						<li class="page-item"><a href="#" class="page-link">4</a></li>
-						<li class="page-item"><a href="#" class="page-link">5</a></li>
-						<li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
-					</ul>
-				</div>
+			</div>
+			<table id="myTable" class="table table-striped table-hover">
+				<thead>
+					<tr >
+						<th>ID</th>
+						<th>Tipo Cliente</th>
+						<th>Nombres</th>
+						<th>Apellidos</th>
+						<th>Email</th>
+						<th>Telefono</th>
+						<th>Estado</th>
+						<th>Edit/Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-status="Activo">
+						<td>1</td>
+						<td>Persona Natural</td>
+						<td>Nombre 1 nombre2</td>
+						<td>apellido1 apellido2</td>
+						<td>ejemplo@gmail.com</td>
+						<td>123456789</td>
+						<td><span class="status text-success">&bull;</span> Activo </td>
+						<td>
+							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+						</td>
+					</tr>
+					<tr data-status="Activo">
+						<td>2</td>
+						<td>Empresa</td>
+						<td>Nombre 1 nombre2</td>
+						<td>apellido1 apellido2</td>
+						<td>ejemplo@gmail.com</td>
+						<td>123456789</td>
+						<td><span class="status text-success">&bull;</span> Activo </td>
+						<td>
+							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+						</td>
+					</tr>
+					<tr data-status="Bloqueado">
+						<td>3</td>
+						<td>Mobiliario</td>
+						<td>Nombre 1 nombre2</td>
+						<td>apellido1 apellido2</td>
+						<td>ejemplo@gmail.com</td>
+						<td>123456789</td>
+						<td><span class="status text-danger">&bull;</span> Bloqueado </td>                      
+						<td>
+							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+						</td>                        
+					</tr>
+					<tr data-status="Activo">
+						<td>4</td>
+						<td>Distribuidor Nacional</td>
+						<td>Nombre 1 nombre2</td>
+						<td>apellido1 apellido2</td>
+						<td>ejemplo@gmail.com</td>
+						<td>123456789</td>
+						<td><span class="status text-success">&bull;</span> Activo</td>
+						<td>
+							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+						</td>
+					</tr>
+					<tr data-status="Activo">
+						<td>5</td>
+						<td>Distribuidor Nacional</td>
+						<td>Nombre 1 nombre2</td>
+						<td>apellido1 apellido2</td>
+						<td>ejemplo@gmail.com</td>
+						<td>123456789</td>
+						<td><span class="status text-success">&bull;</span> Activo </td>
+						<td>
+							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+						</td>
+					</tr>
+					<tr data-status="Bloqueado">
+						<td>6</td>
+						<td>Mobiliario</td>
+						<td>Nombre 1 nombre2</td>
+						<td>apellido1 apellido2</td>
+						<td>ejemplo@gmail.com</td>
+						<td>123456789</td>
+						<td><span class="status text-danger">&bull;</span>Bloqueado </td>
+						<td>
+							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+						</td>
+					</tr>
+					<tr data-status="Bloqueado">
+						<td>7</td>
+						<td>Material P.O.P</td>
+						<td>Nombre 1 nombre2</td>
+						<td>apellido1 apellido2</td>
+						<td>ejemplo@gmail.com</td>
+						<td>123456789</td>
+						<td><span class="status text-danger">&bull;</span> Bloqueado</td>
+						<td>
+							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+						</td>
+					</tr>
+					<tr data-status="Bloqueado">
+						<td>8</td>
+						<td>Productos</td>
+						<td>Nombre 1 nombre2</td>
+						<td>apellido1 apellido2</td>
+						<td>ejemplo@gmail.com</td>
+						<td>123456789</td>
+						<td><span class="status text-danger">&bull;</span> Bloqueado </td>
+						<td>
+							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+						</td>
+					</tr>
+					<tr data-status="Activo">
+						<td>9</td>
+						<td>Productos</td>
+						<td>Nombre 1 nombre2</td>
+						<td>apellido1 apellido2</td>
+						<td>ejemplo@gmail.com</td>
+						<td>123456789</td>
+						<td><span class="status text-success">&bull;</span> Activo </td>
+						<td>
+							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+						</td>
+					</tr>				
+					<tr data-status="Activo">
+						<td>10</td>
+						<td>Material P.O.P</td>
+						<td>Nombre 1 nombre2</td>
+						<td>apellido1 apellido2</td>
+						<td>ejemplo@gmail.com</td>
+						<td>123456789</td>
+						<td><span class="status text-success">&bull;</span> Activo </td>
+						<td>
+							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+						</td>
+					</tr>				
+				</tbody>
+			</table>
+			<div class="Generar">
+				<button class="btn btn-light" value="" onclick="exportTableToExcel('myTable')">Generar Reporte</button>
 			</div>
 		</div>
+
+<!-- Edit -->
+<div id="editEmployeeModal" class="modal fade">
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="signup-form">
+			<form action="/examples/actions/confirmation.php" method="post">
+				<h2>Editar Cliente</h2>
+				<p>Editar datos de cliente</p>
+				<hr>
+				<div class="form-group">
+					<div class="form-group">
+						<select type="text" class="form-control" id="proveedor" placeholder="Proveedor" required>
+							<option value="value0">Tipo Cliente</option>
+							<option value="value1">Persona Natural</option>
+							<option value="value1">Empresa</option>
+						</select>   
+					</div> 
+					<div class="form-group">
+						<input type="text" class="form-control" name="Nombres" placeholder="Nombres" required="required">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="Apellidos" placeholder="Apellidos" required="required">
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control" name="email" placeholder="Email" required="required">
+					</div>
+					<div class="form-group">
+						<input type="tel" class="form-control" name="Telefono" placeholder="Telefono" required="required">
+					</div>	
+					<div class="form-group">
+						<select type="text" class="form-control" id="estado" placeholder="Estado" required>
+							<option value="value0">Estado</option>
+							<option value="value1">• Activo</option>
+							<option value="value1">• Bloqueado</option>
+						</select>   
+					</div> 			
+				</div>
+				
+				<div class="modal-footer">
+					<input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
+					<input type="submit" class="btn btn-danger" value="Agregar">
+				</div>
+			</form>
+		</div>
 	</div>
-	<div id="editEmployeeModal" class="modal fade">
+</div>
+</div>
+
+<!-- Delete -->
+<div id="deleteEmployeeModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form>
+				<div class="modal-header">						
+					<h4 class="modal-title ">Eliminar Cliente</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">		
+					<p>¿Deseas elminar este cliente?</p>
+					<p ><small>Esta accion no se puede deshacer</small></p>
+				</div>
+				<div class="modal-footer">
+					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+					<input type="submit" class="btn btn-danger" value="Eliminar">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div id="editoEmployeeModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="signup-form">
-				<form action="/examples/actions/confirmation.php" method="post">
-					<h2>Editar Cliente</h2>
-					<p>Editar datos de Cliente</p>
-					<hr>
+				<form action="" method="post">
+					<h2>Agregar Cliente</h2>
+					<p>Agregue datos del cliente</p>
 					<div class="form-group">
-						<div class="row">
-							<div class="col"><input type="text" class="form-control" name="first_name" placeholder="Nombres " required="required"></div>
-							<div class="col"><input type="text" class="form-control" name="last_name" placeholder="Apellidos " required="required"></div>
-						</div>        	
+						<select type="text" class="form-control" id="proveedor" placeholder="Proveedor" required>
+							<option value="value0">Tipo Cliente</option>
+							<option value="value1">Persona Natural</option>
+							<option value="value1">Empresa</option>
+						</select>   
+					</div>   	
+					<div class="form-group">
+						<input type="text" class="form-control" name="Nombres" placeholder="Nombres" required="required">
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control" name="first_name" placeholder="Email"required="required">
+						<input type="text" class="form-control" name="Apellidos" placeholder="Apellidos" required="required">
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control" name="first_name" placeholder="Celular"required="required">
+						<input type="email" class="form-control" name="email" placeholder="Email" required="required">
 					</div>
-                    <div class="form-group"><select class="form-control" name="first_name" placeholder="Email"required="required">
-                        <option value=""> ESTADO</option>
-                        <option value="ACTIVO">◉ ACTIVO</option>
-                        <option value="BLOQUEADO">◉	BLOQUEADO</option>
-                    </select></div>
-                    <div class="form-group"><select class="form-control" name="first_name" placeholder="Email"required="required">
-                        <option value=""> TIPO</option>
-                        <option value="PRODUCTOS">◉ Persona Natural</option>
-                        <option value="DISTRIBUIDOR NACIONAL">◉	Empresa</option>
-                    </select></div>
+					<div class="form-group">
+						<input type="tel" class="form-control" name="Telefono" placeholder="Telefono" required="required">
+					</div>
+					<select type="text" class="form-control" id="estado" placeholder="Estado" required>
+						<option value="value0">Estado</option>
+						<option value="value1">• Activo</option>
+						<option value="value1">• Bloqueado</option>
+					</select>   
 					<div class="modal-footer">
 						<input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
 						<input type="submit" class="btn btn-danger" value="Agregar">
@@ -192,67 +321,7 @@
 			</div>
 		</div>
 	</div>
-</div>
-	<div id="deleteEmployeeModal" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<form>
-					<div class="modal-header">						
-						<h4 class="modal-title ">Eliminar Cliente</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					</div>
-					<div class="modal-body">					
-						<p>¿Deseas elminar este Cliente?</p>
-						<p ><small>Esta accion no se puede deshacer</small></p>
-					</div>
-					<div class="modal-footer">
-						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-						<input type="submit" class="btn btn-danger" value="Eliminar">
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<div id="editoEmployeeModal" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="signup-form">
-					<form action="" method="post">
-						<h2>Agregar Cliente</h2>
-						<p>Agregue datos del nuevo cliente</p>
-						<hr>
-						<div class="form-group">
-							<div class="row">
-								<div class="col">
-									<input type="text" class="form-control" name="first_name" placeholder="Nombres" required="required">
-								</div>
-								<div class="col"><input type="text" class="form-control" name="last_name" placeholder="Apellidos" required="required"></div>
-							</div>        	
-						</div>
-						<div class="form-group">
-							<input type="email" class="form-control" name="email" placeholder="Email" required="required">
-						</div>
-						<div class="form-group">
-							<input type="password" class="form-control" name="Telefono" placeholder="Telefono" required="required">
-						</div>
-						<div class="form-group">
-							<select type="text" class="form-control" id="inputPhone" placeholder="Tipo producto" required>
-								<option value="value1">Persona Natural</option>
-								<option value="value2">Empresa</option>
-							</select>
-						</div>
-						<div class="form-group">
-							<input type="email" class="form-control" name="email" placeholder="Nombre Empresa" required="required">
-						</div>
-						<div class="modal-footer">
-							<input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
-							<input type="submit" class="btn btn-danger" value="Agregar">
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+</div>	
 </main>    
 </body>
 </html>
