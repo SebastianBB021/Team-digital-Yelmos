@@ -1,7 +1,7 @@
-function exportTableToExcel(tableID, filename = ''){
+function exportTableToExcel(myTable, filename = ''){
     var downloadLink;
     var dataType = 'application/vnd.ms-excel';
-    var tableSelect = document.getElementById(tableID);
+    var tableSelect = document.getElementById(myTable);
     var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
     
     // Specify file name
