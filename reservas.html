@@ -46,6 +46,13 @@
                 </div>             
             </div>
             
+            <!-- pACKING -->
+            <!-- ************** -->
+            <!-- ************** -->
+            <!-- ************** -->
+            <!-- ************** -->
+
+
             <div class="content">
                 <div data-content id="logistica" class="active">
                     <h2>Packing</h2>
@@ -53,8 +60,8 @@
                         <form action="" method=""  id="formulario">
                             <div class="Flex">
                             <div class="form-control">
-                                <label for="usuario">Perosna que resive</label>
-                                <input id="usuario" type="text" onkeypress="return soloLetras(event)">
+                                <label for="usuario">Persona que resive</label>
+                                <input id="usuario" type="text" onkeypress="return soloLetras(event)" >
                                 <p></p>                
                             </div>
                 
@@ -109,67 +116,69 @@
                                 <p></p>                
                             </div>
 
-                            <button type="submit">Enviar</button>
+                            <button id="boton1" class="btn btn-outline-secondary" >Enviar</button>
                         
                         </form>
                     <!-- </section>  -->           
                 </div>
-        
+
+
+                <!-- Material POP -->
+                <!-- *************** -->
+                <!-- *************** -->
+                <!-- *************** -->
+
+
                 <div data-content id="materialP">
                     <h2>Material P.O.P</h2>
                     <form id="formulario2" action="" onsubmit="areaVerification()">
+                        <!-- Radiuu -->
+                        <label for="Objetos" class="tittle-box">Objetos</label>
 
-                            <!-- Radiuu -->
-             <label for="Objetos" class="tittle-box">Objetos</label>
-             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="esferos" id="flexCheckDefault campo">
-                <label class="form-check-label" for="flexCheckDefault">Esferos</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="agendas" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                     Agendas
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="posillos" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Posillos
-                    </label>
-                </div>
-                <div class="form-check">
-                     <input class="form-check-input" type="checkbox" value="llaveros" id="flexCheckDefault">
-                     <label class="form-check-label" for="flexCheckDefault">
-                         Llaveros
-                         </label>
-                        </div>
-                        <div class="form-check">
-                             <input class="form-check-input" type="checkbox" value="otros" id="flexCheckDefault">
-                             <label class="form-check-label" for="flexCheckDefault">
-                                Otros:
-                             </label>
-                            </div>
-
+    
+                        <label class="check" for="flexCheckDefault">esferos
+                            <input class="radio" type="radio" name="radio">
+                        </label>
+                           
+                        <label class="check" for="flexCheckDefault">agendas
+                            <input class="radio" type="radio" name="radio">
+                        </label>
+                                
+                        <label class="check" for="flexCheckDefault">posillos
+                            <input class="radio" type="radio" name="radio">
+                        </label>
+                                   
+                        <label class="check" for="flexCheckDefault">llaveros
+                            <input class="radio" type="radio" name="radio">
+                        </label>
+                                   
+                        <label class="check" for="flexCheckDefault">Otros:
+                            <input class="radio" type="radio" name="radio">
+                        </label>
+                        <br>
+                        <br>
             <!-- ********** -->
             <!-- ********** -->
-
-
+            <!-- Campos -->
+        <div class="Posi">
             <div class="form-control">
                 <label for="Cuales">Cuales</label>
-                <input id="Cuales" type="Cuales">
+                <input id="Cuales" type="Cuales" onkeypress="return soloLetras(event)">
                 <p></p>                
             </div>
 
             <div class="form-control">
                 <label for="Cantidad0">Cantidad Esferos</label>
-                <input id="Cantidad0" type="text">
+                <input id="Cantidad0" type="text" onkeypress="return valideKey(event);">
                 <p></p>                
             </div>
             <div class="form-control">
                 <label for="Cantidad1">Cantidad Agendas</label>
-                <input id="Cantidad1" type="text">
+                <input id="Cantidad1" type="text" onkeypress="return valideKey(event);">
                 <p></p>                
             </div>
+        </div>
+        <div class="Posi">
             <div class="form-control">
                 <label for="Cantidad2">Cantidad Posiilos</label>
                 <input id="Cantidad2" type="text" onkeypress="return valideKey(event);">
@@ -177,18 +186,19 @@
             </div>
             <div class="form-control">
                 <label for="Cantidad3">Cantidad Llveros</label>
-                <input id="Cantidad3" type="text">
+                <input id="Cantidad3" type="text" onkeypress="return valideKey(event);">
                 <p></p>                
             </div>
             <div class="form-control">
                 <label for="Cantidad4">Cantidad "Otros"</label>
-                <input id="Cantidad4" type="text">
+                <input id="Cantidad4" type="text" onkeypress="return valideKey(event);">
                 <p></p>                
             </div>
-
-            <div class="form-control">
+        </div>
+        <div class="Posi">
+        <div class="form-control">
                 <label for="Fecha1">Fecha</label>
-                <input id="Fecha1" type="text" onkeypress="return valideKey(event);">
+                <input id="Fecha1" type="date" onkeypress="return valideKey(event);">
                 <p></p>                
             </div>
 
@@ -197,23 +207,25 @@
                 <input id="Detalle" type="password">
                 <p></p>                
             </div>
+        </div>
 
 
             <h2>Informacion Destinatario</h2>
-
+        <div class="Posi">
             <div class="form-control">
                 <label for="Nombre">Nombre</label>
-                <input id="Nombre" type="text">
+                <input id="Nombre" type="text" onkeypress="return soloLetras(event)">
                 <p></p>                
             </div>
             
             <div class="form-control">
                 <label for="Numero">Numero Celular</label>
-                <input id="Numero" type="text">
+                <input id="Numero" type="text" onkeypress="return valideKey(event);">
                 <p></p>                
             </div>
-
-            <div class="form-control">
+        </div>
+        <div class="Posi">
+        <div class="form-control">
                 <label for="Localidad">Localidad</label>
                 <input id="Localidad" type="text">
                 <p></p>                
@@ -231,50 +243,79 @@
                 <input id="Email" type="email">
                 <p></p>                
             </div>
+        </div>
 
-            <button>Enviar</button>                                                          
-                    </form>                           
-                </div>
-                 
-                <div data-content id="eventos">
-                    <h2>Eventos</h2>   
-                    <form action="" onsubmit="areaVerification()">
-                        <section class="form">
-                            
-                            <select name="tipoEvento" id="tipoEvento">
-                                <option value="0">--Seleccione Tipo Evento--</option>
-                                <option value="1">Lanzamiento de producto</option>
-                                <option value="2">Presentacion marca</option>
-                                <option value="3">Inauguración</option>
-                            </select>
+            <button id="boton2" class="btn btn-outline-secondary">Enviar</button>
+        </form> 
+    </div>
 
-                            <input type="text" name="nombre-eventos" id="nombre-eventos" placeholder="Nombre del Evento" required>
-                    
-                            <input type="text" name="mailEventos" id="mailEventos" placeholder="Email" required>
 
-                            <input type="tel" name="telEvento" id="televento" max="10" placeholder="Teléfono" required> 
-                            
-                            <input type="text" name="cantidad" id="direccion" placeholder="Direccion" required> 
-                          
-                            <input type="text" name="cantidad" id="Localidad" placeholder="Localidad" required>
-                             
-                            <input type="text" name="numlocal" id="numlocal" placeholder="Numero del local">       
-                            
-                            <section class="fecha">
-                                <label for="fecha.evento">Fecha </label>
-                                <input type="date" name="fecha-eventos" id="fecha-eventos">
-                            </section>
+    <!-- Evento -->
+    <!-- **************** -->
+    <!-- **************** -->
+    <!-- **************** -->
+    <div data-content id="eventos">
+        <h2>Eventos</h2> 
+         <form id="formulario3"action="">
+        <div class="Posi">
+            <div class="form-control">
+                <label for="Tipo">Tipo</label>
+                <select id="">
+                    <option value="">--------</option>
+                    <option value=" Lanzamiento Producto">Lanzamiento Producto</option>
+                    <option value=" Presentacion Marca ">Presentacion Marca</option>
+                    <option value=" Inaguracion ">Inaguracion</option>
+                </select>
+                <p></p>                
+            </div>
 
-                            <textarea name="descripcioneventos" id="descripcion" cols="113" rows="5" placeholder="Descripcion de Evento"></textarea>
-
-                            <textarea name="detalleseventos" id="detalles" cols="113" rows="5" placeholder="Detalles de Evento"></textarea>
-
-                            <button type="submit" class="btn btn-primary w-100 fs-5">Reservar</button>
-                            <br>
-                            <br>
-                            <button type="reset" class="btn btn-primary w-100 fs-5" id="reiniciar" name="reiniciar" onclick="confirmMesssage()">Reestablecer</button>    
-
-                        </section>                   
+            <div class="form-control">
+                <label for="Nombre2">Nombre Evento</label>
+                <input id="Nombre2" type="text" onkeypress="return soloLetras(event)">
+                <p></p>                
+            </div>
+        </div>
+        <div class="Posi">
+            <div class="form-control">
+                <label for="Email2">E-mail</label>
+                <input id="Email2" type="email">
+                <p></p>                
+            </div>
+            <div class="form-control">
+                <label for="Telefono2">Telefono</label>
+                <input id="Telefono2" type="text" onkeypress="return valideKey(event);">
+                <p></p>                
+            </div>
+            <div class="form-control">
+                <label for="Local">Numero Local</label>
+                <input id="Local" type="text" >
+                <p></p>                
+            </div>
+        </div>
+        <div class="Posi">
+            <div class="form-control">
+                <label for="Descripcion">Descripcion</label>
+                <input id="Descripcion" type="text" onkeypress="return soloLetras(event)">
+                <p></p>                
+            </div>
+            
+            <div class="form-control">
+                <label for="Localidad2">Localidad</label>
+                <input id="Localidad2" type="text">
+                <p></p>                
+            </div>
+            <div class="form-control">
+                <label for="Direccion2">Direccion</label>
+                <input id="Direccion2" type="text">
+                <p></p> 
+            </div>
+        </div>
+            <div class="form-control">
+                <label for="Detalle2">Detalle</label>
+                <input id="Detalle2" type="text" onkeypress="return soloLetras(event)">
+                <p></p>                
+            </div>
+            <button id="boton3" class="btn btn-outline-secondary">Enviar</button>
                     </form>  
                 </div>
     

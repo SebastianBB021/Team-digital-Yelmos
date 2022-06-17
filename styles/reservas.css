@@ -93,7 +93,7 @@
     font:weight 200px
 }
 
-.form-control input {
+.form-control input,select {
     border: none;
     background-color: #ededed;
     display: block;
@@ -126,16 +126,23 @@
     visibility: visible;
     color:#e74c3c;
 }
- #formulario button {
-    background: #1074e7;
-    border:1px solid #1074e7;
-    border-radius: 2px;
-    color: #f6f6e9;
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-} 
+.Posi{
+    display: flex;
+}
 
 
+/* Radiussss */
+ .check{
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    margin: 0 25px;
+}
+/* .radio{
+    width: 0;
+       
+}
+.check label{
+    font-size: 20px;
+} */
 

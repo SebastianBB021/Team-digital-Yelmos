@@ -24,7 +24,7 @@ function validation (){
 }
 if (usuarioCliente == "1234567" && password == "cliente123" && rol == "Cliente"){
     alert ("Bienvenido");
-    window.location = "perfilcliente.html";
+    window.location = "inicioCliente.html";
 return false;
 }
 if (usuarioCliente == "12345678" && password == "administrador123" && rol == "Administrador"){

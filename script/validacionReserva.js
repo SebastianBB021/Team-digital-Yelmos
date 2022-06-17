@@ -30,7 +30,7 @@ window.addEventListener('load', ()=> {
         const ObservacionValor = Observacion.value.trim();
      
         //validando campo usuario
-        //(!usuarioValor) ? console.log('CAMPO VACIO') : console.log(usuarioValor)
+        
         if(!usuarioValor){
             //console.log('CAMPO VACIO')
             validaFalla(usuario, 'Llene este espacio')
@@ -285,6 +285,159 @@ window.addEventListener('load', ()=> {
 
 })
 
+
+/* Validacion Eventos */
+/* ****************** */
+/* ****************** */
+/* ****************** */
+/* ****************** */
+
+window.addEventListener('load', ()=> {
+    const form = document.querySelector('#formulario3')
+    /* const Tipo = document.getElementById('Tipo') */
+    const Nombre2 = document.getElementById('Nombre2')
+    const Email2 = document.getElementById('Email2')
+    const Telefono2 = document.getElementById('Telefono2')
+    const Local = document.getElementById('Local')
+    const Descripcion = document.getElementById('Descripcion')
+    const Detalle2 = document.getElementById('Detalle2')
+    const Localidad2 = document.getElementById('Localidad2')
+    const Direccion2 = document.getElementById('Direccion2')
+ 
+    
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        validaCampos()
+    })
+    
+    const validaCampos = ()=> {
+        //capturar los valores ingresados por el usuario
+        /* const TipoValor = Tipo.value.trim() */
+        const Nombre2Valor = Nombre2.value.trim()
+        const Email2Valor = Email2.value.trim();
+        const Telefono2Valor = Telefono2.value.trim()
+        const LocalValor = Local.value.trim()
+        const DescripcionValor = Descripcion.value.trim()
+        const Detalle2Valor = Detalle2.value.trim()
+        const Localidad2Valor = Localidad2.value.trim()
+        const Direccion2Valor = Direccion2.value.trim()
+
+     
+        //validando campo usuario
+        //(!usuarioValor) ? console.log('CAMPO VACIO') : console.log(usuarioValor)
+        /* if(!TipoValor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Tipo, 'Campo vacío')
+        }else{
+            validaOk(Tipo)
+        } */
+        if(!Nombre2Valor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Nombre2, 'Campo vacío')
+        }else{
+            validaOk(Nombre2)
+        }
+
+
+         //validando campo email
+         if(!Email2Valor){
+            validaFalla(Email2, 'Campo vacío')            
+        }else if(!validaEmail(Email2Valor)) {
+            validaFalla(Email2, 'El e-mail no es válido')
+        }else {
+            validaOk(Email2)
+        }
+
+        /* ******** */
+
+        if(!Telefono2Valor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Telefono2, 'Campo vacío')
+        }else{
+            validaOk(Telefono2)
+        }
+
+        if(!LocalValor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Local, 'Campo vacío')
+        }else{
+            validaOk(Local)
+        }
+
+        if(!DescripcionValor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Descripcion, 'Campo vacío')
+        }else{
+            validaOk(Descripcion)
+        }
+        if(!Direccion2Valor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Direccion2, 'Campo vacío')
+        }else{
+            validaOk(Direccion2)
+        }
+        if(!Localidad2Valor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Localidad2, 'Campo vacío')
+        }else{
+            validaOk(Localidad2)
+        }
+        if(!Detalle2Valor){
+            //console.log('CAMPO VACIO')
+            validaFalla(Detalle2, 'Campo vacío')
+        }else{
+            validaOk(Detalle2)
+        }    
+        
+        
+        
+
+
+
+/*         
+         const er = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}$/          
+         if(!passValor) {
+             validaFalla(pass, 'Campo vacío')
+         } else if (passValor.length < 8) {             
+             validaFalla(pass, 'Debe tener 8 caracteres cómo mínimo.')
+         } else if (!passValor.match(er)) {
+             validaFalla(pass, 'Debe tener al menos una may., una min. y un núm.')
+         } else {
+             validaOk(pass)
+         }
+    
+          
+    
+         if(!passConfirmaValor){
+             validaFalla(passConfirma, 'Confirme su password')
+         } else if(passValor !== passConfirmaValor) {
+             validaFalla(passConfirma, 'La password no coincide')
+         } else {
+             validaOk(passConfirma)
+         }
+
+ */
+    }
+
+    const validaFalla = (input, msje) => {
+        const formControl = input.parentElement
+        const aviso = formControl.querySelector('p')
+        aviso.innerText = msje
+
+        formControl.className = 'form-control falla'
+    }
+    const validaOk = (input, msje) => {
+        const formControl = input.parentElement
+        formControl.className = 'form-control ok'
+    }
+
+    const validaEmail = (email) => {
+        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);        
+    }
+
+})
+
 /* ************************** */
 
 
@@ -337,3 +490,26 @@ function limpia() {
             document.getElementById("miInput").value = '';
     }
 }
+
+/* Agregar y Elminar datos */
+/* function datos() {
+    var usuario = document.getElementById("usuario").value;
+    var ciuadad = document.getElementById("ciuadad").value;
+    var Direccion = document.getElementById("Direccion").value;
+    var arreglo = [usuario, ciuadad, Direccion];
+    return arreglo;
+  }
+
+  function borrar() {
+    document.getElementById("usuario").value = "rrrrr";
+    document.getElementById("ciuadad").value = "rrrrr";
+    document.getElementById("Direccion").value = "rrrrr";
+  }
+
+  function alerta() {
+    var arreglo = datos();
+    alert(`Su usuario es ${arreglo[0]}, su ciudad es ${arreglo[1]} y su direccion es ${arreglo[2]}`);
+  }
+  boton1.onclick = alerta;
+  botonE.onclick = borrar;
+ */
