@@ -113,6 +113,16 @@ window.addEventListener('load', ()=> {
     }
 
 })
+/* function submitform(){
+    if(usuarioValor == validaOk){
+        alert("Formulario enviado desde Java Script");
+        document.getElementById('formulario').submit();
+        return false
+    }else{
+        alert("No has llenado nada")
+    }
+
+  } */
 /* ************************** */
 /* Validacion Material P.O.P */
 window.addEventListener('load', ()=> {

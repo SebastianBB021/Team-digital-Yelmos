@@ -24,7 +24,7 @@ function validation (){
 }
 if (usuarioCliente == "1234567" && password == "cliente123" && rol == "Cliente"){
     alert ("Bienvenido");
-    window.location = "inicioCliente.html";
+    window.location = "perfilcliente.html";
 return false;
 }
 if (usuarioCliente == "12345678" && password == "administrador123" && rol == "Administrador"){
@@ -32,9 +32,9 @@ if (usuarioCliente == "12345678" && password == "administrador123" && rol == "Ad
     window.location = "vistaAdministrador.html";
 return false;
 }
-if (usuarioCliente == "123456789" && password == "cliente12" && rol == "Cliente"){
+if (usuarioCliente == "123456789" && password == "cliente1234" && rol == "Cliente"){
     alert ("Bienvenido");
-    window.location = "reservas.html";
+    window.location = "inicioCliente.html";
 return false;
 }
 }        
