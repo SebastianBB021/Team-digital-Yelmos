@@ -38,7 +38,7 @@
         <h5>LOGIN SOCIO</h5>
         <input class="controls" type="text" name="username"  id="username" placeholder="Usuario (Documento)" onkeypress="return valideKey(event);">
 
-        <input class="controls" type="password" name="contrasena" id="password" placeholder="Contraseña">
+        <input class="controls" type="password" name="contrasena" id="password" placeholder="Contraseña" onkeypress="return soloLetras(event)">
 
         <select name="roles" id="roles">
           <option value=""><-Seleccione-></option>

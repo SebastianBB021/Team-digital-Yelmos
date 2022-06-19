@@ -15,6 +15,11 @@ window.addEventListener('load', ()=> {
     form.addEventListener('submit', (e) => {
         e.preventDefault()
         validaCampos()
+/*         if(validaCampos){
+            validaCampos
+        }else{
+            form.resert();
+        } */
     })
     
     const validaCampos = ()=> {
@@ -113,6 +118,8 @@ window.addEventListener('load', ()=> {
     }
 
 })
+
+
 /* function submitform(){
     if(usuarioValor == validaOk){
         alert("Formulario enviado desde Java Script");

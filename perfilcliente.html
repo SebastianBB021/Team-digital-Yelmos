@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/nav.css">
-    <link rel="stylesheet" href="/styles/perfilcliente1.css">
+    <link rel="stylesheet" href="/styles/perfilcliente.css">
     <!-- <link rel="stylesheet" href="/styles/inicioCliente.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,19 +28,19 @@
 	</header>
     
     <main class="main">
-        <div class="container">
-            <img class="img" src="img/icons8-user-skin-type-7-96.png" alt="Sebastian Barragan Basto" width="180" height="160">
-            <div class="descripcion">
-                <h3>Johan cliente</h3>
-                <p>Bienvenido!! Todo esta listo para que gestiones tus reservas<br> Revisa o gestiona tu perfil <br> <br> <button class="btn btn-outline-secondary">Perfil</button></a></p>
-            </div>
-        </div>
-    </div>
-
     <div class="grid">
-        <a href="historialclienteReserva.html" class="a"><div class="reservas"> <h4>Tus Reservas</h4> <img src="/img/estadi.png" alt="imagen" width="180" ></div></a> 
-        <a href="usuariocliente.html" class="a"><div class="datos"><h4>Tus datos</h4> <img src="img/datos.gif" alt="" width="180" height=""></div></a>
-        <a href="reservas.html" class="a"><div class="crea"><h4>Crea reservas <img src="img/reservas.gif" alt="" width="180"></h4></div></a>
+        <div class="grid-prefil">
+                <div class="perfil">
+                    <img src="img/icons8-user-skin-type-7-96.png" alt="Administrador" width="180">
+                    <h3>Johan cliente</h3>
+                    <p>Bienvenido!! Todo esta listo para que gestiones tus reservas y tu perfil<br> estadisticas de tu perfil <br> <br> <button class="btn btn-outline-secondary">Perfil</button></a></p>
+                </div>
+        </div>
+        <div class="grid-anidados">
+             <div class="anidados01"><h4>Tus reservas</h4> <a href="historialclienteReserva.html" class="a"><img class="ims" src="img/reserva2.png" alt="" width="200"></a></div>
+             <div class="anidados02"><h4>Tus datos</h4> <a href="usuariocliente.html" class="a"><img class="ims" src="img/perfil.png" alt="" width="200"></a></div>
+             <div class="anidados03"><h4>Crea reservas</h4> <a href="reservas.html" class="a"><img class="ims" src="img/reserva.png" alt="" width="200"></a></div>
+        </div>
     </div>
     </main>
 </body>

@@ -1,5 +1,5 @@
 body{
-    padding: 15px;
+    padding: 50px;
 }
 img{
     float: left;
@@ -11,14 +11,12 @@ h4{
 
 /* clases */
 .ims{
-    padding: 25px;
+    padding: 50px 50px;
 }
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
-    
-    
+       
 }
 .grid>div{
     background-color: white;
@@ -34,9 +32,9 @@ h4{
 }
 .grid-anidados{
     display: grid;
-    grid-template-columns: repeat(3, 200px);
-    grid-auto-rows: 300px;
-    gap: 5px;
+    grid-template-columns: repeat(3, 33%);
+    grid-auto-rows: 350px;
+    gap: 15px;
     /* justify-self: end; */
 }
 .grid-anidados>div{
@@ -51,18 +49,6 @@ h4{
     background-color: #dbdbdb;
 }
 .grid-anidados .anidados03:hover{
-    border: 3px solid #d6d6d6;
-    background-color: #dbdbdb;
-}
-.grid-anidados .anidados04:hover{
-    border: 3px solid #d6d6d6;
-    background-color: #dbdbdb;
-}
-.grid-anidados .anidados05:hover{
-    border: 3px solid #d6d6d6;
-    background-color: #dbdbdb;
-}
-.grid-anidados .anidados06:hover{
     border: 3px solid #d6d6d6;
     background-color: #dbdbdb;
 }

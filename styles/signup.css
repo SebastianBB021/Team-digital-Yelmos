@@ -90,3 +90,7 @@ font-size: 14px;
 .formulario a:hover {
 text-decoration: underline;
 }
+.inscribirse:hover{
+  color: rgb(29, 28, 28);
+  text-decoration: none;
+}
