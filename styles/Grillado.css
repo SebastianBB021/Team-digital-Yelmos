@@ -1,0 +1,71 @@
+body{
+    padding: 15px;
+}
+img{
+    float: left;
+}
+h4{
+    font-family: "Homer Simpson UI";
+    padding: 25px;
+}
+
+/* clases */
+.ims{
+    padding: 25px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    
+    
+}
+.grid>div{
+    background-color: rgb(252, 252, 252);
+    padding: 1em;
+    
+    
+}
+.grid-perfil{
+    display: grid;
+    justify-self: start;
+}
+.grid-anidados{
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-auto-rows: 300px;
+    gap: 10px;
+    justify-self: end;
+}
+.grid-anidados .anidados01:hover{
+    border: 3px solid #d6d6d6;
+    background-color: #dbdbdb;
+}
+.grid-anidados .anidados02:hover{
+    border: 3px solid #d6d6d6;
+    background-color: #dbdbdb;
+}
+.grid-anidados .anidados03:hover{
+    border: 3px solid #d6d6d6;
+    background-color: #dbdbdb;
+}
+.grid-anidados .anidados04:hover{
+    border: 3px solid #d6d6d6;
+    background-color: #dbdbdb;
+}
+.grid-anidados .anidados05:hover{
+    border: 3px solid #d6d6d6;
+    background-color: #dbdbdb;
+}
+.grid-anidados .anidados06:hover{
+    border: 3px solid #d6d6d6;
+    background-color: #dbdbdb;
+}
+.a{
+    text-decoration: none; 
+    color: black;
+} 
+.a:hover{
+    text-decoration: none; 
+    color: black;  
+}

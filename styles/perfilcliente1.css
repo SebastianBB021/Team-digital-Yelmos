@@ -1,7 +1,12 @@
 body{
     padding: 20px ;
 }
-
+h4{
+    font-family: "Homer Simpson UI";
+}
+.img{
+    float: left;
+}
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -11,7 +16,7 @@ body{
 .grid div{
     padding: 20px;
 }
-.grid div:hover{
+.grid .reservas:hover{
     border: 3px solid #c9dcf1;
     background-color: #f2f4f7;
 } 
@@ -19,13 +24,11 @@ body{
     border: 3px solid #f3f2c7;
     background-color: #f2f5e2;
 } 
-.grid .crea:hover:hover:hover{
+.grid .crea:hover{
     border: 3px solid #eedcbb;
     background-color: #f7f0e1;
 } 
-h4{
-    font-family: "Homer Simpson UI";
-}
+
 .a{
     text-decoration: none; 
     color: black;
