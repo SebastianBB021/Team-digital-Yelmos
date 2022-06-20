@@ -21,11 +21,6 @@
         <nav class="main-nav">
             <ul class="list-main-nav">
                 <li class="nav-item"><a href="vistaAdministrador.html">Inicio</a></li>
-                <li class="nav-item"><a href="despachos.html">Despachos</a></li>
-                <li class="nav-item"><a href="inventarios.html">Inventarios</a></li>
-                <li class="nav-item"><a href="eventos.html">Eventos</a></li> 
-                <li class="nav-item" id="sign-up"><a href="reservaslogin.html">Reservas</a></li>
-                <li class="nav-item"><a href="proveedores.html">Proveedor</a></li> 
                 <li class="nav-item"><a href="clientes.html">Cliente</a></li>
 				<a href="index.html" class="icons-nav">
 					<i class="fa-solid fa-right-to-bracket"></i>
@@ -39,7 +34,7 @@
 			<div class="titulo">
 				<div class="row">
 					<div class="col-sm-5">
-						<h2><b>Cliente</b></h2>
+						<h2><b>Clientes</b></h2>
 					</div>
 					<div class="col-sm-7">
 						<div  class="btn-group" data-toggle="buttons">
@@ -208,9 +203,6 @@
 					</tr>				
 				</tbody>
 			</table>
-			<div class="Generar">
-				<button class="btn btn-light" value="" onclick="exportTableToExcel('myTable')">Generar Reporte</button>
-			</div>
 		</div>
 
 <!-- Edit -->
@@ -321,6 +313,39 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- datatables con bootstrap -->
+	<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap5.min.js"></script>
+   
+	<!-- Para usar los botones -->
+	<script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+
+   <script>
+   $(document).ready(function () {
+	   $("#myTable").DataTable({
+		   dom: "Bfrtip",
+		   buttons:{
+			   dom: {
+				   button: {
+					   className: 'btn'
+				   }
+			   },
+			   buttons: [
+			   {
+				   //definimos estilos del boton de excel
+				   extend: "excel",
+				   text:'Generar Reporte',
+				   className:'btn btn-outline-success'
+			   }
+			   ]            
+		   }            
+	   });
+   });
+   </script>
+
 </div>	
 </main>    
 </body>
