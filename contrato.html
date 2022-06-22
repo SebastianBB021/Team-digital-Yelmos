@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/eventos.css">
+    <script src="https://kit.fontawesome.com/1d159cd404.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+<header class="header">
+    <div class="container logo-nav-container">
+        <a href="#" class="logo"><img src="img/Logo Team Digital Yelmos.jpeg" alt=""></a>
+        <nav class="main-nav">
+            <ul class="list-main-nav">
+                <li class="nav-item"><a href="vistaAdministrador.html">Inicio</a></li>
+                <li class="nav-item"><a href="eventos.html">Eventos</a></li> 
+                <li class="nav-item"><a href="contrato.html">Contrato</a></li> 
+				<a href="index.html" class="icons-nav">
+					<i class="fa-solid fa-right-to-bracket"></i>
+				</a> 
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="main">
+    <div class="container-xl">
+        <div class="titulo">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h2><b>Contrato</b></h2>
+                </div>
+                <div class="col-sm-7">
+                    <div  class="btn-group" data-toggle="buttons">
+                        <div class="agregar">
+                            <a href="#editoEmployeeModal" class="btn btn-secondary" data-toggle="modal"><i class="fa-solid fa-circle-plus"></i> <span>Añadir nuevo evento</span></a>
+                        </div>
+                        <div class="buscar">
+                            <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Busca el evento...">
+                        </div>						
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table id="myTable" class="table table-striped table-hover">
+            <thead>
+                <tr >
+                    <th>ID</th>
+                    <th>Evento</th>
+                    <th>Fecha</th>
+                    <th>Cantidad Implementos</th>
+                    <th>Proveedor</th>
+                    <th>Edit/Delet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>28/06/2022</td>
+                    <td>54</td>
+                    <td>Andres Proveedor</td>
+                    <td>
+                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>15</td>
+                    <td>25/06/2022</td>
+                    <td>54</td>
+                    <td>Carlo Proveedor</td>
+                    <td>
+                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>20</td>
+                    <td>25/06/2022</td>
+                    <td>45</td>
+                    <td>Laura Proveedor</td>
+                    <td>
+                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>63</td>
+                    <td>25/06/2022</td>
+                    <td>25</td>
+                    <td>Carol Proveedor</td>
+                    <td>
+                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>45</td>
+                    <td>25/06/2022</td>
+                    <td>54</td>
+                    <td>Mary Proveedor</td>
+                    <td>
+                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+</body>
+</html>

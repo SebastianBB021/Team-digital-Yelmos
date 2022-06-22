@@ -121,6 +121,21 @@ function validarNumeros(e){
 
 
 
+/* Validacion de Correo  */
+function validacionEmail(){
+    var correo = document.getElementById ("email").value;
+
+    if(correo == "")
+    alert("Ingrese su correo para enviar codigo")
+
+    if(correo == "francojohan@gmail.com"){
+        alert ("El codigo ya se ha enviado a su correo")
+        return false
+    }else{
+        alert ("su correo no es valido")
+    }
+}
+
 
 
 

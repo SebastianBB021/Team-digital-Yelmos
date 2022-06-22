@@ -61,14 +61,14 @@
 				<table id="myTable" class="table table-striped table-hover">
 					<thead>
 						<tr >
-							<th>#</th>
-							<th>Cliente</th>
-							<th>Destinatario</th>
-							<th>Telefono</th>
-							<th>Fecha</th>
-							<th>Direccion</th>
+							<th>ID</th>
+							<th>Packing</th> 
+							<th>Fecha Salida</th>
 							<th>Cantidad</th>
-							<th>Detalles</th>  
+							<th>Tipo producto</th>
+							<th>Destinatario</th>
+							<th>Direccion Destinatario</th>
+							<th>Detalles</th> 
 							<th>Estado</th>
 							<th>Edit/Delete</th>
 						</tr>
@@ -76,12 +76,12 @@
 					<tbody>
 						<tr data-status="pendiente">
 							<td>1</td>
+							<td>5</td>
+							<td>03//07/2022</td>
+							<td>56</td>
+							<td>Decolorante</td>                        
 							<td>Fabian Espinoza</td>
-							<td>Gabriel Ochoa</td>
-							<td>3196291845</td>
-							<td>04/10/2022</td>                        
-							<td>Calle 20 #21D 26 </td>
-							<td>66</td>
+							<td>Calle 78 #21 40</td>
 							<td>Sin Detalles</td>
 							<td><span class="status text-warning">&bull;</span> Entregada</td>
 							<td>
@@ -91,12 +91,12 @@
 						</tr>
 						<tr data-status="activa">
 							<td>2</td>
+							<td>5</td>
+							<td>03//07/2022</td>
+							<td>56</td>
+							<td>Decolorante</td>                        
 							<td>Fabian Espinoza</td>
-							<td>Alison Rodrigez</a></td>
-							<td>3147041062</td>
-							<td>05/08/2022</td>                       
 							<td>Calle 78 #21 40</td>
-							<td>32</td>
 							<td>Sin Detalles</td>
 							<td><span class="status text-success">&bull;</span> Activa</td>
 							<td>
@@ -106,12 +106,12 @@
 						</tr>
 						<tr data-status="cancelada">
 							<td>3</td>
+							<td>5</td>
+							<td>03//07/2022</td>
+							<td>56</td>
+							<td>Decolorante</td>                        
 							<td>Fabian Espinoza</td>
-							<td>Andres Barbosa</a></td>
-							<td>3111265709</td>
-							<td>11/05/2022</td>
-							<td>Calle 47 Sur #19 48</td>
-							<td>45</td>
+							<td>Calle 78 #21 40</td>
 							<td>Sin Detalles</td>
 							<td><span class="status text-danger">&bull;</span> Cancelada</td>                      
 							<td>
@@ -121,12 +121,12 @@
 						</tr>
 						<tr data-status="activa">
 							<td>4</td>
+							<td>5</td>
+							<td>03//07/2022</td>
+							<td>56</td>
+							<td>Decolorante</td>                        
 							<td>Fabian Espinoza</td>
-							<td>Joan Carvajal</a></td>
-							<td>3156555186</td>
-							<td>06/09/2022</td>
-							<td>Calle 52 #42 03</td>
-							<td>61</td>
+							<td>Calle 78 #21 40</td>
 							<td>Sin Detalles</td>
 							<td><span class="status text-success">&bull;</span> Activa</td>
 							<td>
@@ -136,267 +136,12 @@
 						</tr>
 						<tr data-status="pendiente">
 							<td>5</td>
+							<td>5</td>
+							<td>03//07/2022</td>
+							<td>56</td>
+							<td>Decolorante</td>                        
 							<td>Fabian Espinoza</td>
-							<td>Carol Uribe</a></td>
-							<td>3153924375</td>
-							<td>12/08/2022</td>                        
-							<td>Calle 27 Sur #25 10</td>
-							<td>100</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-warning">&bull;</span> Entregada</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="pendiente">
-							<td>6</td>
-							<td>Alejandro Ramirez</td>
-							<td>María Caicedo </a></td>
-							<td>3118125782</td>
-							<td>10/05/2022</td>                        
-							<td>Calle 50 #38N 18</td>
-							<td>80</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-warning">&bull;</span>Entregada</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="cancelada">
-							<td>7</td>
-							<td>Alejandro Ramirez</td>
-							<td>Julieta Huesos</a></td>
-							<td>3175784324</td>
-							<td>11/06/2022</td>                        
-							<td>Calle 120 #25 23</td>
-							<td>67</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-danger">&bull;</span> Cancelada</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="cancelada">
-							<td>8</td>
-							<td>Alejandro Ramirez</td>
-							<td>Sofía del Río</a></td>
-							<td>3146982808</td>
-							<td>15/06/2022</td>                        
-							<td>Calle 14 #219 D 50</td>
-							<td>30</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-danger">&bull;</span> Cancelada</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="pendiente">
-							<td>9</td>
-							<td>Alejandro Ramirez</td>
-							<td>Ana María </a></td>
-							<td>3002236598</td>
-							<td>17/07/2022</td>                        
-							<td>Calle 14 #219 D 50</td>
-							<td>10</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-warning">&bull;</span> Entregada</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="activa">
-							<td>10</td>
-							<td>Alejandro Ramirez</td>
-							<td>Matías de Greiff Rincón</a></td>
-							<td>3197445168</td>
-							<td>20/06/2022</td>                        
-							<td>Calle 14 #219 D 50</td>
-							<td>150</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-success">&bull;</span> Activa</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="pendiente">
-							<td>11</td>
-							<td>Gabriel Sanchez</td>
-							<td>Carol Fernández.</a></td>
-							<td>3159848026</td>
-							<td>14/06/2022</td>                        
-							<td>Calle 14 #219 D 50</td>
-							<td>35</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-warning">&bull;</span> Entregada</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="pendiente">
-							<td>12</td>
-							<td>Gabriel Sanchez</td>
-							<td>Harold Díaz</a></td>
-							<td>3184880446</td>
-							<td>24/06/2022</td>                        
-							<td>Calle 14 #219 D 50</td>
-							<td>39</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-warning">&bull;</span> Entregada</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="pendiente">
-							<td>13</td>
-							<td>Gabriel Sanchez</td>
-							<td>Fabrico Gómez</a></td>
-							<td>3115287484</td>
-							<td>18/05/2022</td>                        
-							<td>Calle 14 #219 D 50</td>
-							<td>34</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-warning">&bull;</span> Entregada</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="activa">
-							<td>14</td>
-							<td>Gabriel Sanchez</td>
-							<td>Manil Quiroga</a></td>
-							<td>3124170363</td>
-							<td>19/04/2022</td>                        
-							<td>Calle 14 #219 D 50</td>
-							<td>59</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-success">&bull;</span> Activa</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="activa">
-							<td>15</td>
-							<td>Gabriel Sanchez</td>
-							<td>Esporcito Sosa</a></td>
-							<td>3002236598</td>
-							<td>12/06/2022</td>                        
-							<td>Calle 14 #219 D 50</td>
-							<td>11</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-success">&bull;</span> Activa</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="cancelada">
-							<td>16</td>
-							<td>Gabriel Sanchez</td>
-							<td> María Cristina</a></td>
-							<td>3187131212</td>
-							<td>12/05/2022</td>                        
-							<td>Calle 14 #219 D 50</td>
-							<td>1</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-danger">&bull;</span> Cancelada</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="activa">
-							<td>17</td>
-							<td>Gabriel Sanchez</td>
-							<td>Carlos Alberto</a></td>
-							<td>3125377117</td>
-							<td>15/05/2022</td>                        
-							<td>Calle 14 #219 D 50</td>
-							<td>34</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-success">&bull;</span> Activa</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="pendiente">
-							<td>18</td>
-							<td>Juan Valencia</td>
-							<td>Adriana Hernandez</a></td>
-							<td>3100830889</td>
-							<td>25/08/2022</td>                        
-							<td>Calle 14 #219 D 50</td>
-							<td>61</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-warning">&bull;</span> Entregada</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="activa">
-							<td>19</td>
-							<td>Juan Valencia</td>
-							<td>Ximena Lucia</a></td>
-							<td>3019145823</td>
-							<td>18/06/2022</td>                        
-							<td>Calle 14 #219 D 50</td>
-							<td>37</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-success">&bull;</span> Activa</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="pendiente">
-							<td>20</td>
-							<td>Juan Valencia</td>
-							<td>Juan Manuel</a></td>
-							<td>3177234690</td>
-							<td>25/06/2022</td>                        
-							<td>Calle 14 #219 D 50</td>
-							<td>35</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-warning">&bull;</span> Entregada</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="cancelada">
-							<td>21</td>
-							<td>Juan Valencia</td>
-							<td>Carricho Paloma</a></td>
-							<td>3104464240</td>
-							<td>08/06/2022</td>                        
-							<td>Calle 14 #219 D 50</td>
-							<td>40</td>
-							<td>Sin Detalles</td>
-							<td><span class="status text-danger">&bull;</span> Cancelada</td>
-						    <td>
-								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-							</td>
-						</tr>
-						<tr data-status="`pendiente">
-							<td>22</td>
-							<td>Juan Valencia</td>
-							<td>Estepha Leon</a></td>
-							<td>3104627383</td>
-							<td>12/06/2022</td>                        
-							<td>Calle 14 #219 D 50</td>
-							<td>95</td>
+							<td>Calle 78 #21 40</td>
 							<td>Sin Detalles</td>
 							<td><span class="status text-warning">&bull;</span> Entregada</td>
 						    <td>

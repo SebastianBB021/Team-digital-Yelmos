@@ -43,7 +43,7 @@
 								<a href="#editoEmployeeModal" class="btn btn-secondary" data-toggle="modal"><i class="fa-solid fa-circle-plus"></i> <span>Añadir nuevo Cliente</span></a>
 							</div>
 							<div class="buscar">
-								<input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Busca el cliente...">
+								
 							</div>
 							<label class="btn btn-info active">
 								<input type="radio" name="status" value="all" checked="checked">Todos
@@ -62,9 +62,8 @@
 				<thead>
 					<tr >
 						<th>ID</th>
-						<th>Tipo Cliente</th>
 						<th>Nombres</th>
-						<th>Apellidos</th>
+						<th>Rol</th>
 						<th>Email</th>
 						<th>Telefono</th>
 						<th>Estado</th>
@@ -74,11 +73,10 @@
 				<tbody>
 					<tr data-status="Activo">
 						<td>1</td>
-						<td>Persona Natural</td>
-						<td>Nombre 1 nombre2</td>
-						<td>apellido1 apellido2</td>
-						<td>ejemplo@gmail.com</td>
-						<td>123456789</td>
+						<td>Martin Agudelo</td>
+						<td>Gerente</td>
+						<td>golasmartin@gmail.com</td>
+						<td>300225698</td>
 						<td><span class="status text-success">&bull;</span> Activo </td>
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
@@ -86,122 +84,53 @@
 						</td>
 					</tr>
 					<tr data-status="Activo">
-						<td>2</td>
-						<td>Empresa</td>
-						<td>Nombre 1 nombre2</td>
-						<td>apellido1 apellido2</td>
-						<td>ejemplo@gmail.com</td>
-						<td>123456789</td>
+						<td>1</td>
+						<td>Martin Agudelo</td>
+						<td>Gerente</td>
+						<td>golasmartin@gmail.com</td>
+						<td>300225698</td>
 						<td><span class="status text-success">&bull;</span> Activo </td>
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
 						</td>
 					</tr>
-					<tr data-status="Bloqueado">
-						<td>3</td>
-						<td>Mobiliario</td>
-						<td>Nombre 1 nombre2</td>
-						<td>apellido1 apellido2</td>
-						<td>ejemplo@gmail.com</td>
-						<td>123456789</td>
-						<td><span class="status text-danger">&bull;</span> Bloqueado </td>                      
-						<td>
-							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-						</td>                        
-					</tr>
 					<tr data-status="Activo">
-						<td>4</td>
-						<td>Distribuidor Nacional</td>
-						<td>Nombre 1 nombre2</td>
-						<td>apellido1 apellido2</td>
-						<td>ejemplo@gmail.com</td>
-						<td>123456789</td>
-						<td><span class="status text-success">&bull;</span> Activo</td>
-						<td>
-							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-						</td>
-					</tr>
-					<tr data-status="Activo">
-						<td>5</td>
-						<td>Distribuidor Nacional</td>
-						<td>Nombre 1 nombre2</td>
-						<td>apellido1 apellido2</td>
-						<td>ejemplo@gmail.com</td>
-						<td>123456789</td>
+						<td>1</td>
+						<td>Martin Agudelo</td>
+						<td>Gerente</td>
+						<td>golasmartin@gmail.com</td>
+						<td>300225698</td>
 						<td><span class="status text-success">&bull;</span> Activo </td>
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
 						</td>
 					</tr>
-					<tr data-status="Bloqueado">
-						<td>6</td>
-						<td>Mobiliario</td>
-						<td>Nombre 1 nombre2</td>
-						<td>apellido1 apellido2</td>
-						<td>ejemplo@gmail.com</td>
-						<td>123456789</td>
-						<td><span class="status text-danger">&bull;</span>Bloqueado </td>
-						<td>
-							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-						</td>
-					</tr>
-					<tr data-status="Bloqueado">
-						<td>7</td>
-						<td>Material P.O.P</td>
-						<td>Nombre 1 nombre2</td>
-						<td>apellido1 apellido2</td>
-						<td>ejemplo@gmail.com</td>
-						<td>123456789</td>
-						<td><span class="status text-danger">&bull;</span> Bloqueado</td>
-						<td>
-							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-						</td>
-					</tr>
-					<tr data-status="Bloqueado">
-						<td>8</td>
-						<td>Productos</td>
-						<td>Nombre 1 nombre2</td>
-						<td>apellido1 apellido2</td>
-						<td>ejemplo@gmail.com</td>
-						<td>123456789</td>
-						<td><span class="status text-danger">&bull;</span> Bloqueado </td>
+					<tr data-status="Activo">
+						<td>1</td>
+						<td>Martin Agudelo</td>
+						<td>Gerente</td>
+						<td>golasmartin@gmail.com</td>
+						<td>300225698</td>
+						<td><span class="status text-success">&bull;</span> Activo </td>
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
 						</td>
 					</tr>
 					<tr data-status="Activo">
-						<td>9</td>
-						<td>Productos</td>
-						<td>Nombre 1 nombre2</td>
-						<td>apellido1 apellido2</td>
-						<td>ejemplo@gmail.com</td>
-						<td>123456789</td>
+						<td>1</td>
+						<td>Martin Agudelo</td>
+						<td>Gerente</td>
+						<td>golasmartin@gmail.com</td>
+						<td>300225698</td>
 						<td><span class="status text-success">&bull;</span> Activo </td>
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
 						</td>
-					</tr>				
-					<tr data-status="Activo">
-						<td>10</td>
-						<td>Material P.O.P</td>
-						<td>Nombre 1 nombre2</td>
-						<td>apellido1 apellido2</td>
-						<td>ejemplo@gmail.com</td>
-						<td>123456789</td>
-						<td><span class="status text-success">&bull;</span> Activo </td>
-						<td>
-							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-						</td>
-					</tr>				
+					</tr>			
 				</tbody>
 			</table>
 		</div>
