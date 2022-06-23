@@ -211,28 +211,31 @@
 		<div class="modal-content">
 			<div class="signup-form">
 				<form action="/examples/actions/confirmation.php" method="post">
-					<h2>Editar Evento</h2>
-					<p>Editar datos del evento</p>
+					<h2>Editar Producto</h2>
+					<p>Editar datos del producto</p>
+					<div class="form-group">
+						<input type="text" class="form-control" name="TObjeto" placeholder="Tipo Objeto" required="required">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="NObjeto" placeholder="Nombre Objeto" required="required">
+					</div>
+					<div class="form-group">
+						<input type="number" class="form-control" name="CObjeto" placeholder="Cantidad Objeto" required="required">
+					</div>
+					<div class="form-group">
+						<input type="date" class="form-control" name="Fecha" placeholder="Fecha" min="2022-04-01" max="2022-05-5">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="Detalle" placeholder="Detalle" required="required">
+					</div>
 					<div class="form-group">
 						<input type="text" class="form-control" name="Nombre" placeholder="Nombre" required="required">
 					</div>
 					<div class="form-group">
-						<input type="date" class="form-control" name="Fecha" placeholder="Fecha de Entrega" min="2022-04-01" max="2022-05-5">
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" name="Ubicacion" placeholder="Localidad o barrio" required="required">
+						<input type="text" class="form-control" name="Localidad" placeholder="Localidad" required="required">
 					</div>
 					<div class="form-group">
 						<input type="text" class="form-control" name="Direccion" placeholder="Direccion" required="required">
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" name="Email" placeholder="Email" required="required">
-					</div>
-					<div class="form-group">
-						<input type="tel" class="form-control" name="Telefono" placeholder="Telefono" required="required">
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" name="cantidad" placeholder="Cantidad" required="required">
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
@@ -250,11 +253,11 @@
 			<div class="modal-content">
 				<form>
 					<div class="modal-header">						
-						<h4 class="modal-title ">Eliminar Evento</h4>
+						<h4 class="modal-title ">Eliminar Producto</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">					
-						<p>¿Deseas elminar este evento?</p>
+						<p>¿Deseas elminar este producto?</p>
 						<p ><small>Esta accion no se puede deshacer</small></p>
 					</div>
 					<div class="modal-footer">
@@ -272,26 +275,29 @@
 					<form action="" method="post">
 						<h2>Agregar Evento</h2>
 						<p>Agregue datos del evento</p>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="Nombre" placeholder="Nombre" required="required">
-                        </div>
-                        <div class="form-group">
-                            <input type="date" class="form-control" name="Fecha" placeholder="Fecha de Entrega" min="2022-04-01" max="2022-05-5">
-                        </div>
 						<div class="form-group">
-							<input type="text" class="form-control" name="Ubicacion" placeholder="Localidad o barrio" required="required">
+							<input type="text" class="form-control" name="TObjeto" placeholder="Tipo Objeto" required="required">
 						</div>
-                        <div class="form-group">
+						<div class="form-group">
+							<input type="text" class="form-control" name="NObjeto" placeholder="Nombre Objeto" required="required">
+						</div>
+						<div class="form-group">
+							<input type="number" class="form-control" name="CObjeto" placeholder="Cantidad Objeto" required="required">
+						</div>
+						<div class="form-group">
+							<input type="date" class="form-control" name="Fecha" placeholder="Fecha" min="2022-04-01" max="2022-05-5">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="Detalle" placeholder="Detalle" required="required">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="Nombre" placeholder="Nombre" required="required">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="Localidad" placeholder="Localidad" required="required">
+						</div>
+						<div class="form-group">
 							<input type="text" class="form-control" name="Direccion" placeholder="Direccion" required="required">
-						</div>
-                        <div class="form-group">
-							<input type="text" class="form-control" name="Email" placeholder="Email" required="required">
-						</div>
-                        <div class="form-group">
-							<input type="tel" class="form-control" name="Telefono" placeholder="Telefono" required="required">
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" name="cantidad" placeholder="Cantidad" required="required">
 						</div>
 						<div class="modal-footer">
 							<input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">

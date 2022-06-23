@@ -35,7 +35,7 @@
 			<div class="titulo">
 				<div class="row">
 					<div class="col-sm-5">
-						<h2><b>Clientes</b></h2>
+						<h2><b>Usuarios</b></h2>
 					</div>
 					<div class="col-sm-7">
 						<div  class="btn-group" data-toggle="buttons">
@@ -75,7 +75,7 @@
 						<td>1</td>
 						<td>Martin Agudelo</td>
 						<td>Gerente</td>
-						<td>golasmartin@gmail.com</td>
+						<td>ejemplo@gmail.com</td>
 						<td>300225698</td>
 						<td><span class="status text-success">&bull;</span> Activo </td>
 						<td>
@@ -84,10 +84,22 @@
 						</td>
 					</tr>
 					<tr data-status="Activo">
-						<td>1</td>
-						<td>Martin Agudelo</td>
-						<td>Gerente</td>
-						<td>golasmartin@gmail.com</td>
+						<td>2</td>
+						<td>Carlos Ramirez</td>
+						<td>Cliente</td>
+						<td>ejemplo@gmail.com</td>
+						<td>300225698</td>
+						<td><span class="status text-danger">&bull;</span> Bloqueado </td>
+						<td>
+							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
+							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
+						</td>
+					</tr>
+					<tr data-status="Activo">
+						<td>3</td>
+						<td>Mario Hernandez</td>
+						<td>Cliente</td>
+						<td>ejemplo@gmail.com</td>
 						<td>300225698</td>
 						<td><span class="status text-success">&bull;</span> Activo </td>
 						<td>
@@ -96,34 +108,22 @@
 						</td>
 					</tr>
 					<tr data-status="Activo">
-						<td>1</td>
-						<td>Martin Agudelo</td>
+						<td>4</td>
+						<td>Juan Malaver</td>
 						<td>Gerente</td>
-						<td>golasmartin@gmail.com</td>
+						<td>ejemplo@gmail.com</td>
 						<td>300225698</td>
-						<td><span class="status text-success">&bull;</span> Activo </td>
+						<td><span class="status text-danger">&bull;</span> Bloqueado </td>
 						<td>
 							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
 							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
 						</td>
 					</tr>
 					<tr data-status="Activo">
-						<td>1</td>
-						<td>Martin Agudelo</td>
-						<td>Gerente</td>
-						<td>golasmartin@gmail.com</td>
-						<td>300225698</td>
-						<td><span class="status text-success">&bull;</span> Activo </td>
-						<td>
-							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square" data-toggle="tooltip" title="Edit"></i></a>
-							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa-solid fa-trash" data-toggle="tooltip" title="Delete"></i></a>
-						</td>
-					</tr>
-					<tr data-status="Activo">
-						<td>1</td>
-						<td>Martin Agudelo</td>
-						<td>Gerente</td>
-						<td>golasmartin@gmail.com</td>
+						<td>5</td>
+						<td>Stiwart Gonzales</td>
+						<td>Cliente</td>
+						<td>ejemplo@gmail.com</td>
 						<td>300225698</td>
 						<td><span class="status text-success">&bull;</span> Activo </td>
 						<td>
@@ -145,19 +145,16 @@
 				<p>Editar datos de cliente</p>
 				<hr>
 				<div class="form-group">
+					<input type="text" class="form-control" name="Nombres" placeholder="Nombre y Apellido" required="required">
+				</div>
+				<div class="form-group">
 					<div class="form-group">
-						<select type="text" class="form-control" id="proveedor" placeholder="Proveedor" required>
-							<option value="value0">Tipo Cliente</option>
-							<option value="value1">Persona Natural</option>
-							<option value="value1">Empresa</option>
+						<select type="text" class="form-control" id="rol" placeholder="Rol" required>
+							<option value="value0">Rol</option>
+							<option value="value1">• Gerente</option>
+							<option value="value1">• Cliente</option>
 						</select>   
 					</div> 
-					<div class="form-group">
-						<input type="text" class="form-control" name="Nombres" placeholder="Nombres" required="required">
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" name="Apellidos" placeholder="Apellidos" required="required">
-					</div>
 					<div class="form-group">
 						<input type="email" class="form-control" name="email" placeholder="Email" required="required">
 					</div>
@@ -172,7 +169,6 @@
 						</select>   
 					</div> 			
 				</div>
-				
 				<div class="modal-footer">
 					<input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
 					<input type="submit" class="btn btn-danger" value="Agregar">
@@ -212,29 +208,23 @@
 					<h2>Agregar Cliente</h2>
 					<p>Agregue datos del cliente</p>
 					<div class="form-group">
-						<select type="text" class="form-control" id="proveedor" placeholder="Proveedor" required>
-							<option value="value0">Tipo Cliente</option>
-							<option value="value1">Persona Natural</option>
-							<option value="value1">Empresa</option>
-						</select>   
-					</div>   	
-					<div class="form-group">
-						<input type="text" class="form-control" name="Nombres" placeholder="Nombres" required="required">
+						<input type="text" class="form-control" name="Nombres" placeholder="Nombre y Apellido" required="required">
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control" name="Apellidos" placeholder="Apellidos" required="required">
-					</div>
-					<div class="form-group">
-						<input type="email" class="form-control" name="email" placeholder="Email" required="required">
-					</div>
-					<div class="form-group">
-						<input type="tel" class="form-control" name="Telefono" placeholder="Telefono" required="required">
-					</div>
-					<select type="text" class="form-control" id="estado" placeholder="Estado" required>
-						<option value="value0">Estado</option>
-						<option value="value1">• Activo</option>
-						<option value="value1">• Bloqueado</option>
-					</select>   
+						<div class="form-group">
+							<select type="text" class="form-control" id="rol" placeholder="Rol" required>
+								<option value="value0">Rol</option>
+								<option value="value1">• Gerente</option>
+								<option value="value1">• Cliente</option>
+							</select>   
+						</div> 
+						<div class="form-group">
+							<input type="email" class="form-control" name="email" placeholder="Email" required="required">
+						</div>
+						<div class="form-group">
+							<input type="tel" class="form-control" name="Telefono" placeholder="Telefono" required="required">
+						</div>		
+					</div> 
 					<div class="modal-footer">
 						<input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
 						<input type="submit" class="btn btn-danger" value="Agregar">

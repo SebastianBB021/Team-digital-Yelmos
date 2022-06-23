@@ -76,12 +76,12 @@
 					<tbody>
 						<tr data-status="pendiente">
 							<td>1</td>
-							<td>5</td>
-							<td>03//07/2022</td>
-							<td>56</td>
-							<td>Decolorante</td>                        
-							<td>Fabian Espinoza</td>
-							<td>Calle 78 #21 40</td>
+							<td>11</td>
+							<td>23//05/2022</td>
+							<td>50</td>
+							<td>Cremas</td>                        
+							<td>Fabian Sanchez</td>
+							<td>Calle 59 #21-40</td>
 							<td>Sin Detalles</td>
 							<td><span class="status text-warning">&bull;</span> Entregada</td>
 							<td>
@@ -92,11 +92,11 @@
 						<tr data-status="activa">
 							<td>2</td>
 							<td>5</td>
-							<td>03//07/2022</td>
-							<td>56</td>
-							<td>Decolorante</td>                        
-							<td>Fabian Espinoza</td>
-							<td>Calle 78 #21 40</td>
+							<td>01//08/2022</td>
+							<td>67</td>
+							<td>Removedor</td>                        
+							<td>Andres Tobon</td>
+							<td>Calle 78 #21-40</td>
 							<td>Sin Detalles</td>
 							<td><span class="status text-success">&bull;</span> Activa</td>
 							<td>
@@ -106,12 +106,12 @@
 						</tr>
 						<tr data-status="cancelada">
 							<td>3</td>
-							<td>5</td>
-							<td>03//07/2022</td>
-							<td>56</td>
-							<td>Decolorante</td>                        
-							<td>Fabian Espinoza</td>
-							<td>Calle 78 #21 40</td>
+							<td>2</td>
+							<td>30//06/2022</td>
+							<td>25</td>
+							<td>Labial</td>                        
+							<td>Carlos Santana</td>
+							<td>Calle 69 #20-25</td>
 							<td>Sin Detalles</td>
 							<td><span class="status text-danger">&bull;</span> Cancelada</td>                      
 							<td>
@@ -121,12 +121,12 @@
 						</tr>
 						<tr data-status="activa">
 							<td>4</td>
-							<td>5</td>
-							<td>03//07/2022</td>
-							<td>56</td>
+							<td>6</td>
+							<td>16//07/2022</td>
+							<td>35</td>
 							<td>Decolorante</td>                        
-							<td>Fabian Espinoza</td>
-							<td>Calle 78 #21 40</td>
+							<td>Javier Macias</td>
+							<td>Calle 57 #10-02</td>
 							<td>Sin Detalles</td>
 							<td><span class="status text-success">&bull;</span> Activa</td>
 							<td>
@@ -136,12 +136,12 @@
 						</tr>
 						<tr data-status="pendiente">
 							<td>5</td>
-							<td>5</td>
-							<td>03//07/2022</td>
-							<td>56</td>
-							<td>Decolorante</td>                        
-							<td>Fabian Espinoza</td>
-							<td>Calle 78 #21 40</td>
+							<td>1</td>
+							<td>28//05/2022</td>
+							<td>100</td>
+							<td>Esmalte</td>                        
+							<td>Maria Rodriguez</td>
+							<td>Calle 23 #9-11</td>
 							<td>Sin Detalles</td>
 							<td><span class="status text-warning">&bull;</span> Entregada</td>
 						    <td>
@@ -163,26 +163,32 @@
 					<h2>Editar Entrega</h2>
 					<p>Editar datos de la entrega</p>
 					<div class="form-group">
-						<input type="text" class="form-control" name="nombrec" placeholder="Nombre Cliente" required="required">
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" name="nombred" placeholder="Nombre Destinatario" required="required">
-					</div>
-					<div class="form-group">
-						<input type="tel" class="form-control" name="Telefono" placeholder="Telefono" required="required">
+						<input type="number" class="form-control" name="Packing" placeholder="Numero Packing" required="required">
 					</div>
 					<div class="form-group">
 						<input type="date" class="form-control" name="Fecha" placeholder="Fecha" min="2022-04-01" max="2022-05-5">
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control" name="Direccion" placeholder="Direccion" required="required">
+						<input type="number" class="form-control" name="Cantidad" placeholder="Cantidad" required="required">
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control" name="cantidad" placeholder="Cantidad" required="required">
+						<input type="text" class="form-control" name="TProducto" placeholder="Tipo Producto" required="required">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="Destinatario" placeholder="Destinatario" required="required">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="Direccion" placeholder="Direccion Destinatario" required="required">
 					</div>
 					<div class="form-group">
 						<input type="text" class="form-control" name="Detalles" placeholder="Detalles" required="required">
 					</div>
+					<select type="text" class="form-control" id="estado" placeholder="Estado" required>
+						<option value="value0">Estado</option>
+						<option value="value1">• Activa </option>
+						<option value="value1">• Entregada</option>
+						<option value="value1">• Cancelada</option>
+					</select>  
 					<div class="modal-footer">
 						<input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
 						<input type="submit" class="btn btn-danger" value="Agregar">
@@ -241,7 +247,7 @@
 							<input type="password" class="form-control" name="Telefono" placeholder="Telefono" required="required">
 						</div>
 						<div class="form-group">
-							<input type="date" class="form-control" name="party" placeholder="Fecha de Entrega" min="2022-04-01" max="2022-05-5">
+							<input type="date" class="form-control" name="Fecha" placeholder="Fecha de Entrega" min="2022-01-01" max="2023-01-01">
 						</div>
 						<div class="modal-footer">
 							<input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">

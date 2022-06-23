@@ -21,9 +21,9 @@
         <a href="#" class="logo"><img src="img/Logo Team Digital Yelmos.jpeg" alt=""></a>
         <nav class="main-nav">
             <ul class="list-main-nav">
-                <li class="nav-item"><a href="iniciovistagerente.html">Inicio</a></li>
-                <li class="nav-item" id="sign-up"><a href="ReservasGe.html">Packing</a></li>
-                <li class="nav-item"><a href="ReservasGe2.html">Material P.O.P</a></li> 
+                <li class="nav-item"><a href="vistaAdministrador.html">Inicio</a></li>
+                <li class="nav-item" id="sign-up"><a href="reservasLogin.html">Packing</a></li>
+                <li class="nav-item"><a href="reservasLogin2.html">Material P.O.P</a></li> 
 				<a href="index.html" class="icons-nav">
 					<i class="fa-solid fa-right-to-bracket"></i>
 				</a> 
@@ -44,7 +44,6 @@
                                     <a href="#editoEmployeeModal" class="btn btn-secondary" data-toggle="modal"><i class="fa-solid fa-circle-plus"></i> <span>Añadir nuevo</span></a>
                                 </div>
 								<div class="buscar">
-									<input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Buscar...">
 								</div>						
 							</div>
 						</div>
@@ -61,15 +60,15 @@
 							<th>Ciudad</th>
 							<th>Direccion</th>
 							<th>Telefono</th>
-							<th>E-mail</th>
 							<th>Fecha Entrega</th>
+							<th>E-mail</th>
 							<th>Edit/Delete</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>1</td>
-							<td>Sindetalles</td>
+							<td>Sin detalles</td>
                             <td>50</td>
                             <td>Tinte capilar</td>
 							<td>Johan CLiente</td>  
@@ -84,8 +83,8 @@
 							</td>
 						</tr>
 						<tr>
-							<td>1</td>
-							<td>Sindetalles</td>
+							<td>2</td>
+							<td>Sin detalles</td>
                             <td>89</td>
                             <td>Tinte capilar</td>
 							<td>Laura CLiente</td>  
@@ -100,12 +99,12 @@
 							</td>
 						</tr>
 						<tr>
-							<td>1</td>
-							<td>Sindetalles</td>
+							<td>3</td>
+							<td>Sin detalles</td>
                             <td>156</td>
                             <td>Tinte capilar</td>
 							<td>Sebastias CLiente</td>  
-							<td>Monao</td>  
+							<td>Madrid</td>  
 							<td>Calle 25 #79-15</td>  
                             <td>300265898</td>    
                             <td>28/06/2022</td> 
@@ -117,7 +116,7 @@
 						</tr>
 						<tr>
 							<td>4</td>
-							<td>Sindetalles</td>
+							<td>Sin detalles</td>
                             <td>123</td>
                             <td>Tinte capilar</td>
 							<td>Karol CLiente</td>  
@@ -133,7 +132,7 @@
 						</tr>
 						<tr>
 							<td>5</td>
-							<td>Sindetalles</td>
+							<td>Sin detalles</td>
                             <td>46</td>
                             <td>Tinte </td>
 							<td>Anderra CLiente</td>  
@@ -149,7 +148,7 @@
 						</tr>
 						<tr>
 							<td>6</td>
-							<td>Sindetalles</td>
+							<td>Sin detalles</td>
                             <td>40</td>
                             <td>Tinte capilar</td>
 							<td>Felipe CLiente</td>  
@@ -165,7 +164,7 @@
 						</tr>
 						<tr>
 							<td>7</td>
-							<td>Sindetalles</td>
+							<td>Sin detalles</td>
                             <td>30</td>
                             <td>Tinte capilar</td>
 							<td>Rodolfo CLiente</td>  
@@ -181,7 +180,7 @@
 						</tr>
 						<tr>
 							<td>8</td>
-							<td>Sindetalles</td>
+							<td>Sin detalles</td>
                             <td>89/td>
                             <td>Tinte</td>
 							<td>Ana CLiente</td>  
@@ -197,7 +196,7 @@
 						</tr>
 						<tr>
 							<td>9</td>
-							<td>Sindetalles</td>
+							<td>Sin detalles</td>
                             <td>45</td>
                             <td>Tinte capilar</td>
 							<td>JAndres CLiente</td>  
@@ -224,25 +223,31 @@
 					<h2>Editar Evento</h2>
 					<p>Editar datos del evento</p>
 					<div class="form-group">
-						<input type="text" class="form-control" name="Nombre" placeholder="Nombre" required="required">
+						<input type="text" class="form-control" name="Detalles" placeholder="Detalles" required="required">
 					</div>
 					<div class="form-group">
-						<input type="date" class="form-control" name="Fecha" placeholder="Fecha de Entrega" min="2022-04-01" max="2022-05-5">
+						<input type="number" class="form-control" name="CProductos" placeholder="Cantidad Productos" required="required">
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control" name="Ubicacion" placeholder="Localidad o barrio" required="required">
+						<input type="text" class="form-control" name="TProducto" placeholder="Tipo Producto" required="required">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="Destinatario" placeholder="Destinatario" required="required">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="Ciudad" placeholder="Ciudad" required="required">
 					</div>
 					<div class="form-group">
 						<input type="text" class="form-control" name="Direccion" placeholder="Direccion" required="required">
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control" name="Email" placeholder="Email" required="required">
-					</div>
-					<div class="form-group">
 						<input type="tel" class="form-control" name="Telefono" placeholder="Telefono" required="required">
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control" name="cantidad" placeholder="Cantidad" required="required">
+						<input type="date" class="form-control" name="Fecha" placeholder="Fecha" min="2022-04-01" max="2022-05-5">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="Email" placeholder="Email" required="required">
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
@@ -282,26 +287,32 @@
 					<form action="" method="post">
 						<h2>Agregar Evento</h2>
 						<p>Agregue datos del evento</p>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="Nombre" placeholder="Nombre" required="required">
-                        </div>
-                        <div class="form-group">
-                            <input type="date" class="form-control" name="Fecha" placeholder="Fecha de Entrega" min="2022-04-01" max="2022-05-5">
-                        </div>
 						<div class="form-group">
-							<input type="text" class="form-control" name="Ubicacion" placeholder="Localidad o barrio" required="required">
+							<input type="text" class="form-control" name="Detalles" placeholder="Detalles" required="required">
 						</div>
-                        <div class="form-group">
+						<div class="form-group">
+							<input type="number" class="form-control" name="CProductos" placeholder="Cantidad Productos" required="required">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="TProducto" placeholder="Tipo Producto" required="required">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="Destinatario" placeholder="Destinatario" required="required">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="Ciudad" placeholder="Ciudad" required="required">
+						</div>
+						<div class="form-group">
 							<input type="text" class="form-control" name="Direccion" placeholder="Direccion" required="required">
 						</div>
-                        <div class="form-group">
-							<input type="text" class="form-control" name="Email" placeholder="Email" required="required">
-						</div>
-                        <div class="form-group">
+						<div class="form-group">
 							<input type="tel" class="form-control" name="Telefono" placeholder="Telefono" required="required">
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" name="cantidad" placeholder="Cantidad" required="required">
+							<input type="date" class="form-control" name="Fecha" placeholder="Fecha" min="2022-04-01" max="2022-05-5">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="Email" placeholder="Email" required="required">
 						</div>
 						<div class="modal-footer">
 							<input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
