@@ -36,6 +36,8 @@ if (usuarioCliente == "123456789" && password == "cliente1234" && rol == "Client
     alert ("Bienvenido");
     window.location = "inicioCliente.html";
 return false;
+}else{
+    alert("usuario y contraseña incorrecta")
 }
 }        
 

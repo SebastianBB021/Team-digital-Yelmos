@@ -13,7 +13,7 @@ window.addEventListener('load', ()=> {
     const Observacion = document.getElementById('Observacion')
 
     form.addEventListener('submit', (e) => {
-        e.preventDefault()
+        /* e.preventDefault() */
         validaCampos()
 /*         if(validaCampos){
             validaCampos
@@ -531,3 +531,57 @@ function limpia() {
   boton1.onclick = alerta;
   botonE.onclick = borrar;
  */
+
+  function hizoClick() {
+    var usuario = document.getElementById("usuario").value;
+    var ciuadad = document.getElementById("ciuadad").value;
+    var Direccion = document.getElementById("Direccion").value;
+    var Telefono = document.getElementById("Telefono").value;
+    var Tipo = document.getElementById("Tipo").value;
+    var email = document.getElementById("email").value;
+    var Cantidad = document.getElementById("Cantidad").value;
+    var Fecha = document.getElementById("Fecha").value;
+    var Observacion = document.getElementById("Observacion").value;
+    if (usuario == "" || ciuadad == "" || Direccion == "" || Telefono == "" || Tipo == "" || email == "" || Cantidad == "" || Fecha == "" || Observacion == "" ) {
+        alert("Debes completar todos los campos"); 
+    } else {
+    alert("Su reserva ha sido creada");
+    }
+  }
+
+  function hizoClick2() {
+    var usuario = document.getElementById("Cuales").value;
+    var ciuadad = document.getElementById("Cantidad0").value;
+    var Direccion = document.getElementById("Cantidad1").value;
+    var Telefono = document.getElementById("Cantidad2").value;
+    var Tipo = document.getElementById("Cantidad3").value;
+    var email = document.getElementById("Cantidad4").value;
+    var Cantidad = document.getElementById("Fecha1").value;
+    var Fecha = document.getElementById("Detalle").value;
+    var Observacion = document.getElementById("Nombre").value;
+    var Observacion = document.getElementById("Numero").value;
+    var Observacion = document.getElementById("Localidad").value;
+    var Observacion = document.getElementById("Direccion1").value;
+    var Observacion = document.getElementById("Email").value;
+    if (usuario == "" || ciuadad == "" || Direccion == "" || Telefono == "" || Tipo == "" || email == "" || Cantidad == "" || Fecha == "" || Observacion == "" ) {
+        alert("Debes completar todos los campos"); 
+    } else {
+    alert("Su reserva ha sido creada");
+    }
+  }
+
+  function hizoClick3() {
+    var usuario = document.getElementById("Nombre2").value;
+    var ciuadad = document.getElementById("Email2").value;
+    var Direccion = document.getElementById("Telefono2").value;
+    var Telefono = document.getElementById("Local").value;
+    var Tipo = document.getElementById("Descripcion").value;
+    var email = document.getElementById("Localidad2").value;
+    var Cantidad = document.getElementById("Direccion2").value;
+    var Fecha = document.getElementById("Detalle2").value;
+    if (usuario == "" || ciuadad == "" || Direccion == "" || Telefono == "" || Tipo == "" || email == "" || Cantidad == "" || Fecha == "" ) {
+        alert("Debes completar todos los campos"); 
+    } else {
+    alert("Su reserva ha sido creada");
+    }
+  }
