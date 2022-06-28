@@ -29,6 +29,7 @@
     display: flex;
     background-color: #e0e0e0;
     align-items: center;
+    font-size: 20px;
 }
 .artile-ser figure{
     /* width: 60%; */
