@@ -447,6 +447,7 @@ window.addEventListener('load', ()=> {
     const validaOk = (input, msje) => {
         const formControl = input.parentElement
         formControl.className = 'form-control ok'
+        // alert("Su reserva ha sido creada con Exito")
     }
 
     const validaEmail = (email) => {
