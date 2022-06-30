@@ -149,7 +149,7 @@ window.addEventListener('load', ()=> {
     const Email = document.getElementById('Email')
 
     form.addEventListener('submit', (e) => {
-        e.preventDefault()
+        /*e.preventDefault()*/
         validaCampos()
     })
     
@@ -324,7 +324,7 @@ window.addEventListener('load', ()=> {
     
 
     form.addEventListener('submit', (e) => {
-        e.preventDefault()
+        /*e.preventDefault()*/
         validaCampos()
     })
     
